@@ -1,3 +1,5 @@
+Samaad Turner, Joshua Shea, Ekaterina Khoroshilova, John Gause
+
 # Brainstorming Ideas:  
 -workout tracker  
 -resturante reservation tracker  
