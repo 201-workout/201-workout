@@ -27,5 +27,14 @@ Stretch Goals:
 
 * We will be aiming to complete  both of the stretch goals.  
 
+# Functional Requirements:   
 
+- A user can:    
+1. Create an Account  
+2. Login    
+3. Add/Delete an exercise  
+4. Add/Delete a program  
+5. Customize a workout regiment for the day  
+6. Navigate to different pages  
+7. Track individual exercises
 
