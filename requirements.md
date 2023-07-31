@@ -38,3 +38,8 @@ Stretch Goals:
 6. Navigate to different pages  
 7. Track individual exercises
 
+# Data Flow:  
+
+User creates an account or login to an account. After the user logs in , the home page is loaded with all the programs that the user has created. From there, the user can choose to click on a seperate page such as the exercise lists that brings up a list of all exercises stored in the file. Or the user can click to create a program which then opens a page that allows the user to add various workout days, exercises, rep ranges, weight, and/or time. This page can then be saved so the user can access it from the home page. If the user selects a program from the home page, then a seperate page opens up displaying the days and exercises associated with each day. The user can also go to their user page to see personal information as well as exercises that they have indicated to track. The option to track an exercise is given on your program page with an icon next to the exercise.  
+
+
