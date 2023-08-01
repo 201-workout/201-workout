@@ -112,3 +112,18 @@
   background-color: rgb(219, 219, 242);
   border-color: blue;
 }
+
+#icon-container {
+  display: flex;
+  justify-content: right;
+ 
+}
+
+#menu-icon {
+  height: 70px;
+  border: thin solid black;
+}
+
+.part-title {
+  font-size: 50px;
+}
