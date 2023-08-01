@@ -23,10 +23,9 @@
   justify-content: center;
 }
 
-#home-main {
-  margin: 15px;
+#program-list {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
 #welcome-title {
@@ -34,9 +33,12 @@
 }
 
 #create-plan {
+  margin: 50px;
   height: 35px;
   width: fit-content;
   padding-left: 100px;
   padding-right: 100px;
   border-radius: 10px;
+  background-color: rgb(219, 219, 242);
+  border-color: blue;
 }
