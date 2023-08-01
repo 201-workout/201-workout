@@ -22,6 +22,7 @@ li a {
 /* Change the link color to #111 (black) on hover */
 .list a:hover {
     background-color: #111;
+}
 
 #login-box {
     border:thin solid red;
@@ -138,6 +139,21 @@ li a {
   border-color: blue;
 }
 
+#icon-container {
+  display: flex;
+  justify-content: right;
+ 
+}
+
+#menu-icon {
+  height: 70px;
+  border: thin solid black;
+}
+
+.part-title {
+  font-size: 50px;
+}
+
 #sample-exercise {
   display: flex;
   margin-top: 30px;
@@ -147,4 +163,14 @@ li a {
   font-size: 60px;
   justify-content: center;
   align-items: center;
+}
+
+#filter-list {
+  border: thin solid black;
+  padding: 30px;
+}
+
+#filter-list li {
+  font-size: 20px;
+  margin: 10px;
 }
