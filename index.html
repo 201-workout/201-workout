@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Program</title>
+</head>
+<header>
+    <h1>
+        Create a Program
+    </h1>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#exercises">Exercises</a></li>
+        <li><a href="#userPage">User Page</a></li>
+        <li style="float:right"><a class="active" href="#about">About</a></li>
+    </ul>
+
+</header>
+
+<body>
+    <h2>Workout Program Details</h2>
+    <form>
+        <!-- Program Name -->
+        <label for="program_name">Program Name:</label>
+        <input type="text" id="program_name" name="program_name" required><br><br>
+
+        <!-- Day Name (Dropdown) -->
+        <label for="day_name">Day Name:</label>
+        <select id="day_name" name="day_name" required>
+            <option value="" disabled selected>Select a day</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </select><br><br>
+
+        <!-- Sets -->
+        <label for="sets">Sets:</label>
+        <input type="number" id="sets" name="sets" min="1" required><br><br>
+
+        <!-- Reps -->
+        <label for="reps">Reps:</label>
+        <input type="number" id="reps" name="reps" min="1" required><br><br>
+
+        <!-- Timer -->
+        <label for="timer">Timer (in seconds):</label>
+        <input type="number" id="timer" name="timer" min="0" required><br><br>
+
+
+    </form>
+</body>
+<main>
+</main>
+
+</html>
+<footer>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <button type="save" value="Save">save</button>
+
+</footer>
