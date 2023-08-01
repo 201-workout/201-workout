@@ -63,6 +63,7 @@
 #submit-button-section {
     display: flex;
     justify-content: center;
+}
 
 .nav-bar {
   height: 100px;
