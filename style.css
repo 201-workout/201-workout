@@ -24,11 +24,17 @@
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
 #break {
     display: flex;
     flex-direction: row;
     width: 400px;
     margin-bottom: 10px;
+=======
+#program-list {
+  display: flex;
+  justify-content: center;
+>>>>>>> 4b1734b (created basic home page layout with minimal css)
 }
 
 .login-hr {
@@ -36,6 +42,7 @@
     height: 0;
 }
 
+<<<<<<< HEAD
 #name-input {
     display: flex;
     flex-direction: column;
@@ -63,4 +70,15 @@
     display: flex;
     justify-content: center;
 
+=======
+#create-plan {
+  margin: 50px;
+  height: 35px;
+  width: fit-content;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 10px;
+  background-color: rgb(219, 219, 242);
+  border-color: blue;
+>>>>>>> 4b1734b (created basic home page layout with minimal css)
 }
