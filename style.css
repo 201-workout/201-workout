@@ -1,0 +1,32 @@
+#login-box {
+    border:thin solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#login-buttons{
+    display: flex;
+    width: 305px;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+#create-account {
+    display: none;
+    border:thin solid red;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+
