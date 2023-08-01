@@ -24,33 +24,28 @@
     justify-content: space-between;
 }
 
-<<<<<<< HEAD
 #break {
     display: flex;
     flex-direction: row;
     width: 400px;
     margin-bottom: 10px;
-=======
+}
 #program-list {
   display: flex;
   justify-content: center;
->>>>>>> 4b1734b (created basic home page layout with minimal css)
 }
 
-<<<<<<< HEAD
 .login-hr {
     width: 150px;
     height: 0;
-=======
+}
 #welcome-title {
   margin-top: 30px;
   margin-left: 30px;
   padding: 15px;
   font-size: 40px;
->>>>>>> 4f6b5ed (welcome-title changes)
 }
 
-<<<<<<< HEAD
 #name-input {
     display: flex;
     flex-direction: column;
@@ -77,8 +72,7 @@
 #submit-button-section {
     display: flex;
     justify-content: center;
-
-=======
+}
 #create-plan {
   margin: 50px;
   height: 35px;
@@ -88,5 +82,4 @@
   border-radius: 10px;
   background-color: rgb(219, 219, 242);
   border-color: blue;
->>>>>>> 4b1734b (created basic home page layout with minimal css)
 }
