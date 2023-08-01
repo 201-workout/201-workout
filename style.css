@@ -25,7 +25,8 @@
 
 #program-list {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #welcome-title {
@@ -44,4 +45,15 @@
   border-radius: 10px;
   background-color: rgb(219, 219, 242);
   border-color: blue;
+}
+
+#sample-exercise {
+  display: flex;
+  margin-top: 30px;
+  height: 100px;
+  width: 600px;
+  border: thin solid black;
+  font-size: 60px;
+  justify-content: center;
+  align-items: center;
 }
