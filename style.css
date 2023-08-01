@@ -22,6 +22,7 @@ li a {
 /* Change the link color to #111 (black) on hover */
 .list a:hover {
     background-color: #111;
+}
 
 #login-box {
     border:thin solid red;
@@ -152,6 +153,7 @@ li a {
 .part-title {
   font-size: 50px;
 }
+
 #sample-exercise {
   display: flex;
   margin-top: 30px;
