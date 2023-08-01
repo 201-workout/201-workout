@@ -1,4 +1,28 @@
 
+#exerciseUl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#list {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.list a:hover {
+    background-color: #111;
+
 #login-box {
     border:thin solid red;
     display: flex;
@@ -63,7 +87,7 @@
 #submit-button-section {
     display: flex;
     justify-content: center;
-}
+ }  
 
 .nav-bar {
   height: 100px;
@@ -92,7 +116,8 @@
 
 #program-list {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 #welcome-title {
@@ -126,4 +151,14 @@
 
 .part-title {
   font-size: 50px;
+}
+#sample-exercise {
+  display: flex;
+  margin-top: 30px;
+  height: 100px;
+  width: 600px;
+  border: thin solid black;
+  font-size: 60px;
+  justify-content: center;
+  align-items: center;
 }
