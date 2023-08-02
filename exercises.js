@@ -1,17 +1,17 @@
 
-const exercises = [];
+// const exercises = [];
 
-// Exercise Constructor Function
-function Exercise(name, bodyPart, instructions, videoLink) {
-    this.name = name;
-    this.bodyPart = bodyPart;
-    this.instructions = instructions; 
-    this.videoLink = videoLink; 
-    this.sets = 0;
-    this.time = 0;
-    this.distance = 0;
-    this.reps = 0;
-  }
+// // Exercise Constructor Function
+// function Exercise(name, bodyPart, instructions, videoLink) {
+//     this.name = name;
+//     this.bodyPart = bodyPart;
+//     this.instructions = instructions; 
+//     this.videoLink = videoLink; 
+//     this.sets = 0;
+//     this.time = 0;
+//     this.distance = 0;
+//     this.reps = 0;
+//   }
   
   // An array of exercise details
   const exerciseDetails = [
@@ -356,18 +356,18 @@ function Exercise(name, bodyPart, instructions, videoLink) {
     
   
 for (let i = 0; i < exerciseDetails.length; i++) {
-    const currentExercise = exerciseDetails[i];
+    console.log(exerciseDetails[i].name);
+}
+//     const currentExercise = exerciseDetails[i];
   
-    // Creates new exercise object
-    const exercise = new Exercise(
-      currentExercise.name,
-      currentExercise.bodyPart,
-      currentExercise.videoLink,
-      currentExercise.instructions
-    );
-  
-    exercises.push(exercise);
-  }
+//     // Creates new exercise object
+//     const exercise = new Exercise(
+//       currentExercise.name,
+//       currentExercise.bodyPart,
+//       currentExercise.videoLink,
+//       currentExercise.instructions
+//     );
+
 
   // append exercises to exercise list page
   for (let i = 0; i < exerciseDetails.length; i++) {
@@ -449,11 +449,3 @@ for (let i = 0; i < exerciseDetails.length; i++) {
       referenceNode.after(section);
   }
 
-
-  
- 
-
-
- 
-  
-  
