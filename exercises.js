@@ -23,8 +23,8 @@
       instructions: [
         "Lie down on a flat bench.",
         "Grab the barbell with a shoulder-width grip.",
-        "Lower the barbell to your chest.",
-        "Press the barbell back up.",
+        "Lower the barbell to your chest. Pause. Then press the barbell back up.",
+        // "Press the barbell back up.",
       ],
     },
     {
@@ -367,6 +367,85 @@ for (let i = 0; i < exerciseDetails.length; i++) {
 //       currentExercise.videoLink,
 //       currentExercise.instructions
 //     );
+
+
+  // append exercises to exercise list page
+  for (let i = 0; i < exerciseDetails.length; i++) {
+    const exercise = exerciseDetails[i]
+    if (exercise['bodyPart'] === "Chest") {
+      appendExerciseSection('chest-title', exercise);
+
+    } else if (exercise['bodyPart'] === "Back") {
+      appendExerciseSection('back-title', exercise);
+
+    } else if (exercise['bodyPart'] === "Legs") {
+      appendExerciseSection('legs-title', exercise);
+
+    } else if (exercise['bodyPart'] === "Shoulders") {
+      appendExerciseSection('shoulders-title', exercise);
+
+    } else if (exercise['bodyPart'] === "Biceps") {
+      appendExerciseSection('biceps-title', exercise);
+
+    } else if (exercise['bodyPart'] === "Triceps") {
+      appendExerciseSection('triceps-title', exercise);
+
+    } else if (exercise['bodyPart'] === "Abs") {
+      appendExerciseSection('abs-title', exercise);
+
+    } else if (exercise['bodyPart'] === "Cardio") {
+      appendExerciseSection('cardio-title', exercise);
+    } 
+  }
   
-//     exercises.push(exercise);
-//   }
+  // creates elements and populates them with data from exercises array
+  function appendExerciseSection(bodyPartId, exercise) {
+    let section = document.createElement('section');
+    section.setAttribute('class', 'exercise-list-item');
+
+    let img = document.createElement('img');
+    img.setAttribute('class', 'img-list-item');
+    // img.setAttribute('src', exercise.img);
+    section.appendChild(img);
+
+    let info = document.createElement('section');
+    info.setAttribute('class', 'info-item');
+    section.appendChild(info);
+
+    let exerciseName = document.createElement('p');
+    exerciseName.setAttribute('class', 'name-item');
+    exerciseName.textContent = exercise.name;
+    info.appendChild(exerciseName);
+
+    let vidLink = document.createElement('a');
+    vidLink.setAttribute('class', 'vid-link-item');
+    vidLink.innerHTML = exercise.videoLink;
+    info.appendChild(vidLink);
+
+    let descriptionList = document.createElement('ol');
+    descriptionList.setAttribute('class', 'description-list');
+
+    let descriptionItem1 = document.createElement('li');
+    descriptionItem1.setAttribute('type', '1');
+    descriptionItem1.setAttribute('class', 'description-list-item');
+    descriptionItem1.textContent = exercise.instructions[0]
+    descriptionList.appendChild(descriptionItem1);
+
+    let descriptionItem2 = document.createElement('li');
+    descriptionItem2.setAttribute('type', '1');
+    descriptionItem2.setAttribute('class', 'description-list-item');
+    descriptionItem2.textContent = exercise.instructions[1]
+    descriptionList.appendChild(descriptionItem2);
+
+    let descriptionItem3 = document.createElement('li');
+    descriptionItem3.setAttribute('type', '1');
+    descriptionItem3.setAttribute('class', 'description-list-item');
+    descriptionItem3.textContent = exercise.instructions[2]
+    descriptionList.appendChild(descriptionItem3);
+
+    info.appendChild(descriptionList);
+
+    let referenceNode = document.getElementById(bodyPartId);
+      referenceNode.after(section);
+  }
+
