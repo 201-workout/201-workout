@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +15,7 @@
         <li class="list"><a href="#userPage">User Page</a></li>
         <li class="list"><a class="active" href="#about">About</a></li>
     </ul>
-
 </header>
-
 <body>
     <h2>Workout Program Details</h2>
     <form id="workoutForm">
@@ -27,8 +24,11 @@
         <input type="text" id="program_name" name="program_name" required><br><br>
 
         <!-- Exercise Name-->
-        <label for="exercise_name">Exercise Name:</label>
-        <input type="text" id="exercise_name" name="exercise_name" required><br><br>
+        <label for="exercise_dropdown">Select an exercise:</label>
+        <select id="exercise_dropdown"></select>
+        <script src="exercises.js"></script>
+        <br><br>
+        
 
         <!-- Day Name (Dropdown) -->
         <!-- <label for="day_name">Workout Name:</label>
@@ -46,17 +46,17 @@
 
 
         <!-- Sets -->
-        <label for="sets">Sets:</label>
-        <input type="number" id="sets" name="sets" min="1" required><br><br>
+        <!-- <label for="sets">Sets:</label>
+        <input type="number" id="sets" name="sets" min="1" required><br><br> -->
 
         <!-- Reps -->
-        <label for="reps">Reps:</label>
-        <input type="number" id="reps" name="reps" min="1" required><br><br>
+        <!-- <label for="reps">Reps:</label>
+        <input type="number" id="reps" name="reps" min="1" required><br><br> -->
 
         <!-- Exercise Name-->
-        <label for="day">Day:</label>
+        <!-- <label for="day">Day:</label>
         <input type="text" id="day" name="day" required><br><br>
-        <button type="submit">save</button>
+        <button type="submit">save</button> -->
 
     </form>
 </body>
@@ -67,6 +67,5 @@
 <footer>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="app.js"></script>
-
-
+    
 </footer>
