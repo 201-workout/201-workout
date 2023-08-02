@@ -21,7 +21,7 @@ function getUserData() {
   const userNameInput = document.getElementById("user-name-create");
   const userAgeInput = document.getElementById("user-age");
   const userWeightInput = document.getElementById("user-weight");
-
+  console.log(userNameInput, userAgeInput, userWeightInput);
   const name = userNameInput.value;
   const age = parseInt(userAgeInput.value);
   const weight = parseInt(userWeightInput.value);
@@ -29,19 +29,20 @@ function getUserData() {
   return new User(name, age, weight);
 }
 
+
 // Event listener for the submit button
 document.getElementById("submit-button").addEventListener("click", function (event) {
+  const newUser = getUserData();
   event.preventDefault(); // Prevent form submission
 
-  const newUser = getUserData();
 
-  // Do something with the new user data
-  console.log("New User Data:");
+  // Store the new user data into local storage
+  localStorage.setItem('newUser', JSON.stringify(newUser));
+
+  // do something with the new user data
+  console.log("new user data: ");
   console.log(newUser);
 });
-
-
-
 
 
 
