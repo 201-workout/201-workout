@@ -1,17 +1,12 @@
 
-// const exercises = [];
+const exercises = [];
 
-// // Exercise Constructor Function
-// function Exercise(name, bodyPart, instructions, videoLink) {
-//     this.name = name;
-//     this.bodyPart = bodyPart;
-//     this.instructions = instructions; 
-//     this.videoLink = videoLink; 
-//     this.sets = 0;
-//     this.time = 0;
-//     this.distance = 0;
-//     this.reps = 0;
-//   }
+// constructor for when the user creates a program
+function UserProgram(name, exercises) {
+  this.name = name;
+  this.exercises = exercises
+}
+
   
   // An array of exercise details
   const exerciseDetails = [
@@ -355,9 +350,9 @@
 ];
     
   
-for (let i = 0; i < exerciseDetails.length; i++) {
-    console.log(exerciseDetails[i].name);
-}
+// for (let i = 0; i < exerciseDetails.length; i++) {
+//     console.log(exerciseDetails[i].name);
+// }
 //     const currentExercise = exerciseDetails[i];
   
 //     // Creates new exercise object
