@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,43 +8,47 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body id="login-body">
     <main>
         <div id="login-box">
-            <div id="name-input">
-                <label for="user-name-login">Please enter your name:</label>
-                <input id="user-name-login" type="text" name="user-name"
-                placeholder="Your Name" required>
-            </div>
-                <button id="login-button">Login</button>
-                <div id="break">
-                    <hr class="login-hr">
-                    <p>or</p>
-                    <hr class="login-hr">
+            <form id="login-form">
+                <div id="name-input">
+                    <label for="user-name-login">Please enter your name:</label>
+                    <input id="user-name-login" type="text" name="user-name" placeholder="Your Name" required>
                 </div>
-                <button id="account-button">Create Account</button>
-        </div>
-        <div id="create-account">
-            <!-- <div id="new-name-input"> -->
-                <label for="user-name-create">Please enter your name:</label>
-                <input id="user-name-create" class="create-input" type="text" name="user-name"
-                placeholder="Your Name" required>
-            <!-- </div> -->
-            <!-- <div id="age-input"> -->
-                <label for="user-age">Please enter your age:</label>
-                <input id="user-age" class="create-input" type="number" name="user-age"
-                placeholder="Your Age" required>
-            <!-- </div> -->
-            <!-- <div id="weight-input"> -->
-                <label for="user-weight">Please enter your weight:</label>
-                <input id="user-weight" class="create-input" type="number" name="user-weight"
-                placeholder="Your Weight (lbs)" required>
-            <!-- </div> -->
-            <div id="submit-button-section">
-                <button id="submit-button">Submit</button>
+                <button type="submit" id="login-button">Login</button>
+            </form>
+            <div id="break">
+                <hr class="login-hr">
+                <p>or</p>
+                <hr class="login-hr">
             </div>
+            <form id="account-form">
+                <div id="create-account">
+                    <!-- <div id="new-name-input"> -->
+                    <label for="user-name-create">Please enter your name:</label>
+                    <input id="user-name-create" class="create-input" type="text" name="user-name"
+                        placeholder="Your Name" required>
+                    <!-- </div> -->
+                    <!-- <div id="age-input"> -->
+                    <label for="user-age">Please enter your age:</label>
+                    <input id="user-age" class="create-input" type="number" name="user-age" placeholder="Your Age"
+                        required>
+                    <!-- </div> -->
+                    <!-- <div id="weight-input"> -->
+                    <label for="user-weight">Please enter your weight:</label>
+                    <input id="user-weight" class="create-input" type="number" name="user-weight"
+                        placeholder="Your Weight (lbs)" required>
+                    <!-- </div> -->
+                    <div id="submit-button-section">
+                        <button type="submit" id="submit-button">Submit</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </main>
     <script src="login.js"></script>
 </body>
+
 </html>
