@@ -418,6 +418,7 @@ for (let i = 0; i < exerciseDetails.length; i++) {
     info.appendChild(exerciseName);
 
     let vidLink = document.createElement('a');
+    vidLink.setAttribute('class', 'vid-link-item');
     vidLink.innerHTML = exercise.videoLink;
     info.appendChild(vidLink);
 
@@ -425,14 +426,20 @@ for (let i = 0; i < exerciseDetails.length; i++) {
     descriptionList.setAttribute('class', 'description-list');
 
     let descriptionItem1 = document.createElement('li');
+    descriptionItem1.setAttribute('type', '1');
+    descriptionItem1.setAttribute('class', 'description-list-item');
     descriptionItem1.textContent = exercise.instructions[0]
     descriptionList.appendChild(descriptionItem1);
 
     let descriptionItem2 = document.createElement('li');
+    descriptionItem2.setAttribute('type', '1');
+    descriptionItem2.setAttribute('class', 'description-list-item');
     descriptionItem2.textContent = exercise.instructions[1]
     descriptionList.appendChild(descriptionItem2);
 
     let descriptionItem3 = document.createElement('li');
+    descriptionItem3.setAttribute('type', '1');
+    descriptionItem3.setAttribute('class', 'description-list-item');
     descriptionItem3.textContent = exercise.instructions[2]
     descriptionList.appendChild(descriptionItem3);
 

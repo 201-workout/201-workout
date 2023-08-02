@@ -178,29 +178,35 @@ li a {
 /* START styles each exercise section added through DOM */
 .exercise-list-item {
   display: flex;
-  width: 750px;
-  border: thin solid black;
+  width: 900px;
+  /* border: thin solid black; */
   margin: 15px;
 }
 
 .img-list-item {
-  border: thin solid red;
-  height: 400px;
-  width: 400px;
+  border: thin dashed red;
+  height: 300px;
+  width: 300px;
   margin-right: 10px;
 }
 
-/* .info-item {
-  border: thin solid blue;
+.name-item {
+  /* border: thin solid blue; */
+  font-size: 30px;
+  margin: 10px;
 }
 
-.user-data-item {
-  border: thin solid purple;
-  height: 300px;
-  width: 400px;
+.vid-link-item {
+  /* border: thin solid purple; */
+  margin: 10px;
+}
+
+.description-list {
+  margin: 10px;
+  margin-left: 20px;
 }
 
 .description-list-item {
-  border: thin dashed green;
-  height: auto;
-} */
+  margin: 20px;
+}
+/* END */
