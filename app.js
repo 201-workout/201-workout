@@ -9,6 +9,28 @@
 
 // }
 
+
+function UserExercise(name, bodyPart, instructions, videoLink) {
+      this.name = name;
+      this.bodyPart = bodyPart;
+      this.instructions = instructions; 
+      this.videoLink = videoLink; 
+      this.type = type;
+      this.reps = 0;
+    }
+
+    
+const exerciseDropdown = document.getElementById('exercise_dropdown');
+
+// Populate the dropdown with exercise names 
+for (let i = 0; i < exerciseDetails.length; i++) {
+    const exercise = exerciseDetails[i];
+    const exerciseOption = document.createElement('option');
+    exerciseOption.textContent = exercise.name;
+    exerciseDropdown.appendChild(exerciseOption);
+}
+
+
   // Function to save the form data to an object
   function saveFormToObject() {
     // Access the form using its ID
