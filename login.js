@@ -10,10 +10,11 @@
 
 
 // User constructor function
-function User(name, age, weight) {
+function User(name, age, weight, workouts) {
   this.name = name;
   this.age = age;
   this.weight = weight;
+  this.workouts = [];
 }
 
 // check local storage for users array
@@ -55,7 +56,7 @@ document.getElementById("submit-button").addEventListener("click", function (eve
   console.log("new user data: ");
   console.log(newUser);
 
-  window.location.href = 'http://127.0.0.1:5500/index.html';
+  window.location.href = 'index.html';
 });
 
 // Checks if the user already exists
@@ -65,7 +66,7 @@ document.getElementById("login-button").addEventListener("click", function (even
   const name = userNameInput.value;
   const storedUser = JSON.parse(localStorage.getItem('newUser'));
   if (name === storedUser.name) {
-    window.location.href = 'http://127.0.0.1:5500/index.html';
+    window.location.href = 'index.html';
   } else {
   alert ('Please create an account');
   }
