@@ -4,7 +4,7 @@ const exercises = [];
 // constructor for when the user creates a program
 function UserProgram(name, exercises) {
   this.name = name;
-  this.exercises = exercises
+  this.workouts = workouts
 }
 
   
