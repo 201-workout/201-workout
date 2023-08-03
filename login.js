@@ -7,7 +7,7 @@
 //         hiddenSection.style.display = 'flex'; 
 //     }
 // });
-
+let users = [];
 
 // User constructor function
 function User(name, age, weight, workouts) {
@@ -26,7 +26,7 @@ function getUserData() {
   const userNameInput = document.getElementById("user-name-create");
   const userAgeInput = document.getElementById("user-age");
   const userWeightInput = document.getElementById("user-weight");
-  console.log(userNameInput, userAgeInput, userWeightInput);
+  // console.log(userNameInput, userAgeInput, userWeightInput);
   const name = userNameInput.value;
   const age = parseInt(userAgeInput.value);
   const weight = parseInt(userWeightInput.value);
@@ -40,23 +40,22 @@ document.getElementById("submit-button").addEventListener("click", function (eve
   const newUser = getUserData();
   event.preventDefault(); // Prevent form submission
 
-  let users;
+
   let storageValue = localStorage.getItem('users'); // null or array of users.
   if(storageValue == null){
     users = [];
   }else{
-   users = JSON.parse(storageValue);
+    users = JSON.parse(storageValue);
   }
-  users.push(newUser);
   // add newUser to users array
+  users.push(newUser);
 
   // Store the new user data into local storage
   localStorage.setItem('users', JSON.stringify(users));
-  localStorage.setItem('newUser', JSON.stringify(newUser));
+  // localStorage.setItem('newUser', JSON.stringify(newUser));
 
-  console.log("new user data: ");
-  console.log(newUser);
-
+  // console.log("new user data: ");
+  // console.log(newUser);
   window.location.href = 'index.html';
 });
 
@@ -65,11 +64,22 @@ document.getElementById("login-button").addEventListener("click", function (even
   event.preventDefault();
   const userNameInput = document.getElementById("user-name-login");
   const name = userNameInput.value;
-  const storedUser = JSON.parse(localStorage.getItem('newUser'));
-  if (name === storedUser.name) {
-    window.location.href = 'index.html';
+  const storedUsers = JSON.parse(localStorage.getItem('users'));
+  if (storedUsers === null ) {
+    alert('Please create an account');
+    userNameInput.value = '';
   } else {
-  alert ('Please create an account');
+    let userFound = false; 
+    for (let i = 0; i < storedUsers.length; i++) {
+      if (name === storedUsers[i].name) {
+        userFound = true; 
+        window.location.href = 'index.html';
+        break; 
+      }
+    }
+    if (!userFound) {
+      alert('Please create an acount'); 
+    }
   }
 });
 
