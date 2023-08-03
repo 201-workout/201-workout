@@ -11,19 +11,19 @@
   <header>
     <nav class="nav-bar">
       <section class="nav-items">
-        <nav-item>Exercise List</nav-item>
-        <nav-item>User Account</nav-item>
+        <nav-item id="nav-item-list"><a href="exercise-list.html">Exercise List</a></nav-item>
+        <nav-item id="nav-item-user"><a href="user-account.html">User Account</a></nav-item>
       </section>
     </nav>
   </header>
   <main id="home-main">
     <h1 id="welcome-title">Welcome, Name Goes Here</h1>
     <section id="program-list">
-      <div id="sample-exercise">Push, Pull, Legs</div>
+      <div id="sample-exercise">Full Body Workout</div>
       <!-- program list elements (divs?) get injected here from JS -->
-      <button id="create-plan">create new plan</button>
+      <button id="create-plan" type="submit">create new workout</button>
     </section>
   </main>
-  
+  <script src="page-links.js"></script>
 </body>
 </html>

@@ -48,6 +48,7 @@ document.getElementById("submit-button").addEventListener("click", function (eve
   }
   users.push(newUser);
   // add newUser to users array
+
   // Store the new user data into local storage
   localStorage.setItem('users', JSON.stringify(users));
   localStorage.setItem('newUser', JSON.stringify(newUser));
