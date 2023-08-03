@@ -29,17 +29,10 @@ function getUserData() {
   return new User(name, age, weight);
 }
 
-
 // Event listener for the submit button
 document.getElementById("submit-button").addEventListener("click", function (event) {
   const newUser = getUserData();
   event.preventDefault(); // Prevent form submission
-
-  let users = localStorage.getItem('users'); // null or array of users.
-
-  // Store the new user data into local storage
-  localStorage.setItem('newUser', JSON.stringify(newUser));
-
   // do something with the new user data
   console.log("new user data: ");
   console.log(newUser);
