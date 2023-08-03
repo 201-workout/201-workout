@@ -35,7 +35,6 @@ document.getElementById("submit-button").addEventListener("click", function (eve
   const newUser = getUserData();
   event.preventDefault(); // Prevent form submission
 
-  let users = localStorage.getItem('users'); // null or array of users.
 
   // Store the new user data into local storage
   localStorage.setItem('newUser', JSON.stringify(newUser));
