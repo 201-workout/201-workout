@@ -54,7 +54,7 @@ li a {
     display: flex;
     flex-direction: row;
     width: 400px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .login-hr {
@@ -73,10 +73,6 @@ li a {
     margin-bottom: 10px;
 }
 
-#login-button {
-    margin-bottom: 10px;
-}
-
 #user-name-login {
     padding:0px;
 }
@@ -89,6 +85,16 @@ li a {
     display: flex;
     justify-content: center;
  }  
+
+#login-button-section {
+  display: flex;
+  justify-content: center;
+} 
+
+#login-form {
+  border:thin solid red;
+  padding: 20px;
+}
 
 .nav-bar {
   height: 100px;
