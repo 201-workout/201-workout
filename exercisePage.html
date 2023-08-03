@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Program</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<header>
+  <nav class="nav-bar">
+    <section class="nav-items">
+      <nav-item id="nav-item-home"><a href="index.html">Home</a></nav-item>
+      <nav-item id="nav-item-user"><a href="exercise-list.html">Exercise List</a></nav-item>
+      <nav-item id="nav-item-user"><a href="user-account.html">User Account</a></nav-item>
+    </section>
+  </nav>
+  <h1>Create a Program</h1>
+</header>
+<body>
+<main>
+    <h2>Workout Program Details</h2>
+    <form id="workoutForm">
+  
+      <label for="program_name">Program Name:</label>
+      <input type="text" id="program_name" name="program_name" required>
+      <br><br>
+
+      <label for="workout_name">Workout Name:</label>
+      <input type="text" id="workout_name" name="workout_name" required>
+      <br><br>
+
+      <label for="exercise_dropdown">Select an exercise:</label>
+      <select id="exercise_dropdown">
+        <option value="">Select</option>
+      </select>
+      <script src="exercises.js"></script>
+      <br><br>
+
+      <label for="exercise_type">Select exercise type:</label>
+      <select id="exercise_type" name="exercise_type">
+        <option value="">Select</option>
+        <option value="sets">Sets</option>
+        <option value="time">Time</option>
+        <option value="distance">Distance</option>
+      </select>
+      <br><br>
+
+      <div id="sets_reps_inputs" style="display: none;">
+        <label for="sets">Sets:</label>
+        <input type="number" id="sets" name="sets" placeholder="Sets">
+        <br><br>
+
+        <label for="reps">Reps:</label>
+        <input type="number" id="reps" name="reps" placeholder="Reps">
+        <br><br>
+      </div>
+
+      <div id="distance_input" style="display: none;">
+        <label for="distance">Distance (in miles):</label>
+        <input type="number" id="distance" name="distance" placeholder="Distance">
+        <br><br>
+      </div>
+
+     <div id="time_input" style="display: none;">
+        <label for="time">Time (in minutes):</label>
+        <input type="number" id="time" name="time" placeholder="Time">
+        <br><br>
+    </div>
+  
+      <button type="button" onclick="addExercise()">Add Exercise</button>
+      <br><br>
+
+      <div id="selected_exercises"></div>
+
+      <button type="button" onclick="createWorkout()">Create Workout</button>
+    </form>
+    <div id="exercise_details"></div>
+</main>
+</body>
+</html>
+<footer>
+    <script src="app.js"></script>
+</footer>
