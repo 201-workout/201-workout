@@ -133,18 +133,20 @@ function createWorkout() {
 }
 
 // display created workout on home page
-// function displayWorkout(workout) {
-//   let workoutList = document.getElementById('program-list');
-//   let newWorkoutElement = document.createElement('div');
-//   newWorkoutElement.setAttribute('class', 'workout-element');
-//   newWorkoutElement.textContent = `${workout.name}`;
-//   workoutList.appendChild(newWorkoutElement);
-// }
+function displayWorkout(workout) {
+  let workoutList = document.getElementById('program-list');
+  let newWorkoutElement = document.createElement('div');
+  newWorkoutElement.setAttribute('class', 'workout-element');
+  newWorkoutElement.textContent = `${workout.name}`;
+  workoutList.appendChild(newWorkoutElement);
+}
 
-// document.getElementById('submit-workout').addEventListener('click', function(event) {
-//   let workout = createWorkout();
-//   displayWorkout(workout);
-// })
+
+const newWorkoutBtn = document.getElementById('submit-workout')
+newWorkoutBtn.addEventListener('click', function(event) {
+  let workoutObj = createWorkout();
+  displayWorkout(workoutObj);
+});
 
 // UserExercise constructor
 function UserExercise(name, bodyPart, type, sets, time, distance, reps) {
