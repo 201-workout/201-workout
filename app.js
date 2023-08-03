@@ -151,9 +151,4 @@ function Workout(programName, workoutName, userExercises) {
   this.userExercises = userExercises;
 }
 
-  // attempted link between home page and exercisePage (incomplete)
-  document.getElementById("create-plan").addEventListener("click", function () {
-    console.log('hello');
-    window.location.href = "exercisePage.html";
-  });
 
