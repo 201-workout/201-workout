@@ -150,13 +150,13 @@ function createWorkout() {
 
 
 // display created workout on home page
-function displayWorkout(workout) {
-  let workoutList = document.getElementById('program-list');
-  let newWorkoutElement = document.createElement('div');
-  newWorkoutElement.setAttribute('class', 'workout-element');
-  newWorkoutElement.textContent = `${workout.name}`;
-  workoutList.appendChild(newWorkoutElement);
-}
+// function displayWorkout(workout) {
+//   let workoutList = document.getElementById('program-list');
+//   let newWorkoutElement = document.createElement('div');
+//   newWorkoutElement.setAttribute('class', 'workout-element');
+//   newWorkoutElement.textContent = `${workout.name}`;
+//   workoutList.appendChild(newWorkoutElement);
+// }
 
 // document.getElementById('submit-workout').addEventListener('click', function(event) {
 //   let workout = createWorkout();
