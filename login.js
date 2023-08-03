@@ -16,6 +16,10 @@ function User(name, age, weight) {
   this.weight = weight;
 }
 
+// check local storage for users array
+// if user array is null, create an empty array called users
+
+
 // Function to retrieve data from the create user form
 function getUserData() {
   const userNameInput = document.getElementById("user-name-create");
@@ -35,10 +39,17 @@ document.getElementById("submit-button").addEventListener("click", function (eve
   const newUser = getUserData();
   event.preventDefault(); // Prevent form submission
 
-  let users = localStorage.getItem('users'); // null or array of users.
-
+  let users;
+  let storageValue = localStorage.getItem('users'); // null or array of users.
+  if(storageValue == null){
+    users = [];
+  }else{
+   users = JSON.parse(storageValue);
+  }
+  users.push(newUser);
+  // add newUser to users array
   // Store the new user data into local storage
-  localStorage.setItem('newUser', JSON.stringify(newUser));
+  localStorage.setItem('users', JSON.stringify(users));
 
   // do something with the new user data
   console.log("new user data: ");
