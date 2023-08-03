@@ -1,3 +1,7 @@
+
+let users = [];
+let currentUser = null;
+
 // User constructor function
 function User(name, age, weight, workouts) {
   this.name = name;
@@ -16,7 +20,6 @@ function getUserData() {
   const userNameInput = document.getElementById("user-name-create");
   const userAgeInput = document.getElementById("user-age");
   const userWeightInput = document.getElementById("user-weight");
-  // console.log(userNameInput, userAgeInput, userWeightInput);
   const name = userNameInput.value;
   const age = parseInt(userAgeInput.value);
   const weight = parseInt(userWeightInput.value);
@@ -28,7 +31,8 @@ function getUserData() {
 document.getElementById("submit-button").addEventListener("click", function (event) {
   event.preventDefault(); 
   const newUser = getUserData();
-  event.preventDefault(); // Prevent form submission
+  currentUser = newUser;
+  localStorage.setItem('currentUser', JSON.stringify(currentUser));
 
 
   let storageValue = localStorage.getItem('users'); // null or array of users.
@@ -42,10 +46,7 @@ document.getElementById("submit-button").addEventListener("click", function (eve
 
   // Store the new user data into local storage
   localStorage.setItem('users', JSON.stringify(users));
-  // localStorage.setItem('newUser', JSON.stringify(newUser));
 
-  // console.log("new user data: ");
-  // console.log(newUser);
   window.location.href = 'index.html';
 });
 
@@ -62,15 +63,17 @@ document.getElementById("login-button").addEventListener("click", function (even
     let userFound = false; 
     for (let i = 0; i < storedUsers.length; i++) {
       if (name === storedUsers[i].name) {
-        let currentUser = storedUsers[i];
-        userFound = true; 
+        currentUser = storedUsers[i];
+        localStorage.setItem('currentUser', JSON.stringify(currentUser));
+        userFound = true;
+        // Update the users array with the found user
+        users = storedUsers;
         window.location.href = 'index.html';
         break; 
       }
     }
     if (!userFound) {
-      alert('Please create an acount'); 
+      alert('Please create an account'); 
     }
   }
 });
-

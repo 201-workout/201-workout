@@ -8,7 +8,7 @@ const selectedExercisesDiv = document.getElementById('selected_exercises');
 
 
 let selectedExercises = [];
-let workouts = [];
+// let workouts = [];
 
 // Populates the dropdown with exercise names
 for (let i = 0; i < exerciseDetails.length; i++) {
@@ -119,18 +119,35 @@ function displaySelectedExercises() {
 
 // Function to create a workout
 function createWorkout() {
-  const programName = document.getElementById('program_name').value;
-  const workoutName = document.getElementById('workout_name').value;
 
-  const newWorkout = new Workout(programName, workoutName, selectedExercises);
+  const workoutName = document.getElementById('workout_name').value;
+  const newWorkout = new Workout(workoutName, selectedExercises);
 
   document.getElementById('workout_name').value = '';
   
+  let storageValue = localStorage.getItem('users');
+  currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  users = JSON.parse(storageValue);
+
+  // Find the user in the users array and add the new workout to their workouts
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].name === currentUser.name) {
+      users[i].workouts.push(newWorkout);
+      currentUser.workouts.push(newWorkout);
+      break;
+    }
+  }
+
+  localStorage.setItem('currentUser', JSON.stringify(currentUser));
+  localStorage.setItem('users', JSON.stringify(users));
+
   selectedExercises = [];
   displaySelectedExercises();
-  workouts.push(newWorkout);
-  console.log(workouts);
+
+  return newWorkout;
 }
+
+
 
 // display created workout on home page
 function displayWorkout(workout) {
@@ -164,8 +181,7 @@ function UserExercise(name, bodyPart, type, sets, time, distance, reps) {
 }
 
 // Workout constructor
-function Workout(programName, workoutName, userExercises) {
-  this.programName = programName;
+function Workout(workoutName, userExercises) {
   this.workoutName = workoutName;
   this.userExercises = userExercises;
 }
