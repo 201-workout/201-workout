@@ -31,9 +31,10 @@ function getUserData() {
 
 // Event listener for the submit button
 document.getElementById("submit-button").addEventListener("click", function (event) {
+  event.preventDefault(); 
   const newUser = getUserData();
-  event.preventDefault(); // Prevent form submission
-  // do something with the new user data
+  localStorage.setItem('newUser', JSON.stringify(newUser));
+
   console.log("new user data: ");
   console.log(newUser);
 
