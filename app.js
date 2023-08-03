@@ -8,6 +8,7 @@ const selectedExercisesDiv = document.getElementById('selected_exercises');
 
 
 let selectedExercises = [];
+let workouts = [];
 
 // Populates the dropdown with exercise names
 for (let i = 0; i < exerciseDetails.length; i++) {
@@ -127,6 +128,8 @@ function createWorkout() {
   
   selectedExercises = [];
   displaySelectedExercises();
+  workouts.push(newWorkout);
+  console.log(workouts);
 }
 
 // UserExercise constructor
