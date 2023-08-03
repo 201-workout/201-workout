@@ -72,6 +72,7 @@ document.getElementById("login-button").addEventListener("click", function (even
     let userFound = false; 
     for (let i = 0; i < storedUsers.length; i++) {
       if (name === storedUsers[i].name) {
+        let currentUser = storedUsers[i];
         userFound = true; 
         window.location.href = 'index.html';
         break; 
