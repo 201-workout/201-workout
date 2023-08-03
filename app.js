@@ -132,6 +132,20 @@ function createWorkout() {
   console.log(workouts);
 }
 
+// display created workout on home page
+function displayWorkout(workout) {
+  let workoutList = document.getElementById('program-list');
+  let newWorkoutElement = document.createElement('div');
+  newWorkoutElement.setAttribute('class', 'workout-element');
+  newWorkoutElement.textContent = `${workout.name}`;
+  workoutList.appendChild(newWorkoutElement);
+}
+
+document.getElementById('submit-workout').addEventListener('click', function(event) {
+  let workout = createWorkout();
+  displayWorkout(workout);
+})
+
 // UserExercise constructor
 function UserExercise(name, bodyPart, type, sets, time, distance, reps) {
   this.name = name;
