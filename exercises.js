@@ -4,7 +4,7 @@ const exercises = [];
 // constructor for when the user creates a program
 function UserProgram(name, exercises) {
   this.name = name;
-  this.workouts = workouts
+  this.workouts = workouts;
 }
 
   
@@ -349,19 +349,6 @@ function UserProgram(name, exercises) {
 
 ];
     
-  
-// for (let i = 0; i < exerciseDetails.length; i++) {
-//     console.log(exerciseDetails[i].name);
-// }
-//     const currentExercise = exerciseDetails[i];
-  
-//     // Creates new exercise object
-//     const exercise = new Exercise(
-//       currentExercise.name,
-//       currentExercise.bodyPart,
-//       currentExercise.videoLink,
-//       currentExercise.instructions
-//     );
 
 
   // append exercises to exercise list page
@@ -393,7 +380,7 @@ function UserProgram(name, exercises) {
     } 
   }
   
-  // creates elements and populates them with data from exercises array
+  // creates elements and populates them with data from exerciseDetails array
   function appendExerciseSection(bodyPartId, exercise) {
     let section = document.createElement('section');
     section.setAttribute('class', 'exercise-list-item');
