@@ -10,10 +10,6 @@ function User(name, age, weight, workouts) {
   this.workouts = [];
 }
 
-// check local storage for users array
-// if user array is null, create an empty array called users
-let users = [];
-
 
 // Function to retrieve data from the create user form
 function getUserData() {
