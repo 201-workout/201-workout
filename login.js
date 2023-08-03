@@ -16,6 +16,10 @@ function User(name, age, weight) {
   this.weight = weight;
 }
 
+// check local storage for users array
+// if user array is null, create an empty array called users
+
+
 // Function to retrieve data from the create user form
 function getUserData() {
   const userNameInput = document.getElementById("user-name-create");
@@ -29,24 +33,44 @@ function getUserData() {
   return new User(name, age, weight);
 }
 
-
 // Event listener for the submit button
 document.getElementById("submit-button").addEventListener("click", function (event) {
+  event.preventDefault(); 
   const newUser = getUserData();
   event.preventDefault(); // Prevent form submission
 
+  let users;
+  let storageValue = localStorage.getItem('users'); // null or array of users.
+  if(storageValue == null){
+    users = [];
+  }else{
+   users = JSON.parse(storageValue);
+  }
+  users.push(newUser);
+  // add newUser to users array
 
   // Store the new user data into local storage
+  localStorage.setItem('users', JSON.stringify(users));
   localStorage.setItem('newUser', JSON.stringify(newUser));
 
-  // do something with the new user data
   console.log("new user data: ");
   console.log(newUser);
+
+  window.location.href = 'http://127.0.0.1:5500/index.html';
 });
 
-
-
-
+// Checks if the user already exists
+document.getElementById("login-button").addEventListener("click", function (event) {
+  event.preventDefault();
+  const userNameInput = document.getElementById("user-name-login");
+  const name = userNameInput.value;
+  const storedUser = JSON.parse(localStorage.getItem('newUser'));
+  if (name === storedUser.name) {
+    window.location.href = 'http://127.0.0.1:5500/index.html';
+  } else {
+  alert ('Please create an account');
+  }
+});
 
 
 // function User (name, age, weight) {
