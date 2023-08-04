@@ -284,9 +284,9 @@ li a {
 
 
 .workout-element {
-  display: flex;
+  /* display: flex; */
   margin-top: 30px;
-  height: 100px;
+  min-height: 100px;
   width: 600px;
   border: thin solid black;
   background-color: rgba(0, 0, 0, 0.353);
