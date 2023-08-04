@@ -16,11 +16,11 @@ document.getElementById("age").innerHTML = "Age: " + localUser.age;
 document.getElementById("weight").innerHTML = "Weight: " + localUser.weight;
 
 // adding a workout to local user manually because error on create workout
-localUser.workouts = [];
+// localUser.workouts = [];
 
 
-workout = {
-    workoutName: "test",
-    userExercises: []
-}
+// workout = {
+//     workoutName: "test",
+//     userExercises: []
+// }
 //
