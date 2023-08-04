@@ -5,20 +5,45 @@ const timeInputDiv = document.getElementById('time_input');
 const distanceInputDiv = document.getElementById('distance_input');
 const exerciseDetailsDiv = document.getElementById('exercise_details');
 const selectedExercisesDiv = document.getElementById('selected_exercises');
+const createWorkoutForm = document.getElementById('workoutForm');
+
+if (createWorkoutForm) {
+  createWorkoutForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    createWorkout();
+  });
+}
 
 let selectedExercises = [];
+let dontUse = ['type', 'bodyPart'];
 
 // display created workout on home page
-// function displayWorkouts(currentUser) {
-//   let workoutList = document.getElementById('program-list');
-//   for (let i = 0; i < currentUser.workouts.length; i++) {
-//     let newWorkoutElement = document.createElement('div');
-//     newWorkoutElement.setAttribute('class', 'workout-element');
-//     newWorkoutElement.textContent = `${currentUser.workouts[i].workoutName}`;
-//     workoutList.appendChild(newWorkoutElement);
+function displayWorkouts(currentUser) {
+  let workoutList = document.getElementById('program-list');
+  for (let i = 0; i < currentUser.workouts.length; i++) {
+    let newWorkoutElement = document.createElement('div');
+    newWorkoutElement.setAttribute('class', 'workout-element');
+    newWorkoutElement.textContent = `${currentUser.workouts[i].workoutName}`;
 
-//   }
-// }
+    if (currentUser.workouts[i].userExercises.length >= 1){
+      let exercisesElement  = document.createElement('section');
+      for (let j = 0; j < currentUser.workouts[i].userExercises.length; j++) {
+        for (let key in currentUser.workouts[i].userExercises[j]) {
+          if (!dontUse.includes(key)) {
+            let pEl = document.createElement('p');
+            pEl.textContent = `${key} : ${currentUser.workouts[i].userExercises[j][key]}`;
+            exercisesElement.appendChild(pEl);
+          }
+        }
+        newWorkoutElement.appendChild(exercisesElement);
+      
+      }
+
+    }
+    workoutList.appendChild(newWorkoutElement);
+
+  }
+}
 
 if (window.location.pathname === "/index.html") {
   currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -174,51 +199,6 @@ function createWorkout() {
 
   return newWorkout;
 }
-
-
-
-// JavaScript Code
-function displayWorkouts(currentUser) {
-  let workoutList = document.getElementById('program-list');
-
-  for (let i = 0; i < currentUser.workouts.length; i++) {
-    let newWorkoutElement = document.createElement('div');
-    newWorkoutElement.setAttribute('class', 'workout-element');
-    newWorkoutElement.textContent = `${currentUser.workouts[i].workoutName}`;
-    
-    // Create a div to hold the exercises associated with this workout
-    let exerciseList = document.createElement('div');
-    exerciseList.setAttribute('class', 'exercise-list');
-    exerciseList.style.border = 'thin solid black';
-    // exerciseList.style.height = '400px';
-    
-    exerciseList.style.backgroundColor = 'black';
-    exerciseList.style.color = 'white';
-    // exerciseList.textContent.style.color = 'white';
-    exerciseList.style.display = 'none'; // Initially hide the exercise list
-
-    // Add exercises to the exerciseList div
-    for (let j = 0; j < currentUser.workouts[i].userExercises.length; j++) {
-      let exerciseName = currentUser.workouts[i].userExercises[j].name;
-      let exerciseElement = document.createElement('div');
-      exerciseElement.textContent = `${exerciseName}`;
-      
-      exerciseList.appendChild(exerciseElement);
-    }
-
-    // Append the exerciseList div to the workout element
-    newWorkoutElement.appendChild(exerciseList);
-
-    // Add a click event listener to each workout element
-    newWorkoutElement.addEventListener('click', function () {
-      // Toggle the visibility of the exerciseList when clicked
-      exerciseList.style.display = exerciseList.style.display === 'none' ? 'block' : 'none';
-    });
-
-    workoutList.appendChild(newWorkoutElement);
-  }
-}
-
 
 // UserExercise constructor
 function UserExercise(name, bodyPart, type, sets, time, distance, reps) {

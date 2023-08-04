@@ -30,7 +30,9 @@
       <br><br>
 
       <label for="exercise_type">Select exercise type:</label>
-      <select id="exercise_type" name="exercise_type" class="workout-input-box">
+
+      <select id="exercise_type" name="exercise_type" class="workout-input-box" required='true'>
+
         <option value="">Select</option>
         <option value="sets">Sets</option>
         <option value="time">Time</option>
@@ -58,14 +60,15 @@
         <label for="time">Time (in minutes):</label>
         <input type="number" id="time" name="time" placeholder="Time" class="workout-input-box">
         <br><br>
-    </div>
+     </div>
   
       <button class="workout-button" type="button" onclick="addExercise()">Add Exercise</button>
       <br><br>
 
       <div id="selected_exercises"></div>
 
-      <button class="workout-button" type="button" id="submit-workout" onclick="createWorkout()">Create Workout</button>
+      <button  class="workout-button" type="submit" id="submit-workout">Create Workout</button>
+
       <script src ='login.js'></script>
     </form>
     <div id="exercise_details"></div>
