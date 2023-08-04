@@ -1,5 +1,5 @@
-
-const exercises = [];
+// const videoLink = document.getElementById("https://youtu.be/rT7DgCr-3pg")
+// const exercises = [];
 
 // constructor for when the user creates a program
 function UserProgram(name, exercises) {
@@ -14,7 +14,7 @@ function UserProgram(name, exercises) {
     {
       name: "Barbell Bench Press",
       bodyPart: "Chest",
-      videoLink: "https://www.example.com/barbell-bench-press-video",
+      videoLink: "https://youtu.be/rT7DgCr-3pg",
       instructions: [
         "Lie down on a flat bench.",
         "Grab the barbell with a shoulder-width grip.",
@@ -25,7 +25,7 @@ function UserProgram(name, exercises) {
     {
       name: "Decline Barbell Press",
       bodyPart: "Chest",
-      videoLink: "https://www.example.com/decline-barbell-press-video",
+      videoLink: "https://youtu.be/LfyQBUKR8SE",
       instructions: [
         "Adjust the bench to a decline angle.",
         "Lower the barbell to your lower chest.",
@@ -35,7 +35,7 @@ function UserProgram(name, exercises) {
     {
       name: "Incline Cable Fly",
       bodyPart: "Chest",
-      videoLink: "https://www.example.com/incline-cable-fly-video",
+      videoLink: "https://youtu.be/GtHNC-5GtR0",
       instructions: [
         "Set the pulleys to the highest position.",
         "Extend your arms forward.",
@@ -45,7 +45,7 @@ function UserProgram(name, exercises) {
     {
       name: "Incline Dumbbell Press",
       bodyPart: "Chest",
-      videoLink: "https://www.example.com/incline-dumbbell-press-video",
+      videoLink: "https://youtu.be/8iPEnn-ltC8",
       instructions: [
         "Sit on an incline bench holding dumbbells.",
         "Lower the dumbbells to your sides.",
@@ -55,7 +55,7 @@ function UserProgram(name, exercises) {
     {
       name: "Dips",
       bodyPart: "Chest",
-      videoLink: "https://www.example.com/dips-video",
+      videoLink: "https://youtu.be/wjUmnZH528Y",
       instructions: [
         "Hold the dip bars with your arms straight.",
         "Lower your body by bending your elbows.",
@@ -67,7 +67,7 @@ function UserProgram(name, exercises) {
     {
       name: "Barbell Back Squat",
       bodyPart: "Legs",
-      videoLink: "https://www.example.com/barbell-back-squat-video",
+      videoLink: "https://youtu.be/SW_C1A-rejs",
       instructions: [
         "Place a barbell on your upper back.",
         "Squat down by bending your knees and hips.",
@@ -75,9 +75,9 @@ function UserProgram(name, exercises) {
       ],
     },
     {
-      name: "Romanian Split Squat",
+      name: "Bulgarian Split Squat",
       bodyPart: "Legs",
-      videoLink: "https://www.example.com/romanian-split-squat-video",
+      videoLink: "https://youtu.be/2C-uNgKwPLE",
       instructions: [
         "Stand with one foot forward and the other back.",
         "Lower your body by bending your knees.",
@@ -87,7 +87,7 @@ function UserProgram(name, exercises) {
     {
       name: "Leg Extensions",
       bodyPart: "Legs",
-      videoLink: "https://www.example.com/leg-extensions-video",
+      videoLink: "https://youtu.be/YyvSfVjQeL0",
       instructions: [
         "Sit on a leg extension machine.",
         "Extend your legs fully.",
@@ -97,7 +97,7 @@ function UserProgram(name, exercises) {
     {
       name: "Straight Leg Deadlift",
       bodyPart: "Legs",
-      videoLink: "https://www.example.com/straight-leg-deadlift-video",
+      videoLink: "https://youtu.be/OpzRX3slWjE",
       instructions: [
         "Hold a barbell with a shoulder-width grip.",
         "Hinge at your hips and lower the barbell.",
@@ -107,7 +107,7 @@ function UserProgram(name, exercises) {
     {
       name: "Dumbbell Calf Raise",
       bodyPart: "Legs",
-      videoLink: "https://www.example.com/dumbbell-calf-raise-video",
+      videoLink: "https://youtu.be/wwy3BSUjlW4",
       instructions: [
         "Hold dumbbells in each hand.",
         "Raise your heels off the ground.",
@@ -119,7 +119,7 @@ function UserProgram(name, exercises) {
     {
       name: "Barbell Row",
       bodyPart: "Back",
-      videoLink: "https://www.example.com/barbell-row-video",
+      videoLink: "https://youtu.be/9Gf-Ourup_k",
       instructions: [
         "Bend over with your knees slightly bent.",
         "Pull the barbell towards your torso.",
@@ -129,7 +129,7 @@ function UserProgram(name, exercises) {
     {
       name: "Pull Ups",
       bodyPart: "Back",
-      videoLink: "https://www.example.com/pull-ups-video",
+      videoLink: "https://youtu.be/i5fIB4Gqaec",
       instructions: [
         "Hang from a pull-up bar with your palms facing away.",
         "Pull yourself up until your chin is above the bar.",
@@ -139,7 +139,7 @@ function UserProgram(name, exercises) {
     {
       name: "Neutral Grip Pull Down",
       bodyPart: "Back",
-      videoLink: "https://www.example.com/neutral-grip-pull-down-video",
+      videoLink: "https://youtu.be/i5fIB4Gqaec",
       instructions: [
         "Sit at a lat pulldown machine with a neutral grip.",
         "Pull the bar down to your chest.",
@@ -149,7 +149,7 @@ function UserProgram(name, exercises) {
     {
       name: "Deadlift",
       bodyPart: "Back",
-      videoLink: "https://www.example.com/deadlift-video",
+      videoLink: "https://youtu.be/XSl9PlRssos",
       instructions: [
         "Stand with your feet hip-width apart.",
         "Bend down and grab the barbell with an overhand grip.",
@@ -159,7 +159,7 @@ function UserProgram(name, exercises) {
     {
       name: "Neutral Grip Cable Row",
       bodyPart: "Back",
-      videoLink: "https://www.example.com/neutral-grip-cable-row-video",
+      videoLink: "https://youtu.be/sP_4vybjVJs",
       instructions: [
         "Sit at a cable row machine with a neutral grip.",
         "Pull the handles towards your torso.",
@@ -171,7 +171,7 @@ function UserProgram(name, exercises) {
   {
     name: "Barbell Curls",
     bodyPart: "Biceps",
-    videoLink: "https://www.example.com/barbell-curls-video",
+    videoLink: "https://youtu.be/kwG2ipFRgfo",
     instructions: [
       "Hold a barbell with your palms facing up.",
       "Curl the barbell towards your shoulders.",
@@ -181,7 +181,7 @@ function UserProgram(name, exercises) {
   {
     name: "Dumbbell Hammer Curls",
     bodyPart: "Biceps",
-    videoLink: "https://www.example.com/dumbbell-hammer-curls-video",
+    videoLink: "https://youtu.be/484A0p_y0r4o",
     instructions: [
       "Hold dumbbells with your palms facing your body.",
       "Curl the dumbbells towards your shoulders.",
@@ -191,7 +191,7 @@ function UserProgram(name, exercises) {
   {
     name: "Preacher Curls",
     bodyPart: "Biceps",
-    videoLink: "https://www.example.com/preacher-curls-video",
+    videoLink: "https://youtu.be/fIWP-FRFNU0",
     instructions: [
       "Sit at a preacher curl bench.",
       "Curl the barbell towards your shoulders.",
@@ -203,7 +203,7 @@ function UserProgram(name, exercises) {
   {
     name: "Cable Push Downs",
     bodyPart: "Triceps",
-    videoLink: "https://www.example.com/cable-push-downs-video",
+    videoLink: "https://youtu.be/i5fIB4Gqaec",
     instructions: [
       "Stand at a cable station with a straight bar attachment.",
       "Push the bar down until your arms are fully extended.",
@@ -213,7 +213,7 @@ function UserProgram(name, exercises) {
   {
     name: "Skull Crushers",
     bodyPart: "Triceps",
-    videoLink: "https://www.example.com/skull-crushers-video",
+    videoLink: "https://youtu.be/S0fmDR60X-o",
     instructions: [
       "Lie on a flat bench with a barbell.",
       "Lower the barbell towards your forehead.",
@@ -223,7 +223,7 @@ function UserProgram(name, exercises) {
   {
     name: "Close Grip Bench Press",
     bodyPart: "Triceps",
-    videoLink: "https://www.example.com/close-grip-bench-press-video",
+    videoLink: "https://youtu.be/G6EsZnQMhmw",
     instructions: [
       "Lie on a flat bench with a narrow grip on the barbell.",
       "Lower the barbell to your chest.",
@@ -235,7 +235,7 @@ function UserProgram(name, exercises) {
   {
     name: "Lateral Raises",
     bodyPart: "Shoulders",
-    videoLink: "https://www.example.com/lateral-raises-video",
+    videoLink: "https://youtu.be/i5fIB4Gqaec",
     instructions: [
       "Stand with dumbbells at your sides.",
       "Raise the dumbbells out to your sides.",
@@ -245,7 +245,7 @@ function UserProgram(name, exercises) {
   {
     name: "Overhead Press",
     bodyPart: "Shoulders",
-    videoLink: "https://www.example.com/overhead-press-video",
+    videoLink: "https://youtu.be/2yjwXTZQDDI",
     instructions: [
       "Hold a barbell at shoulder level with an overhand grip.",
       "Press the barbell overhead.",
@@ -255,7 +255,7 @@ function UserProgram(name, exercises) {
   {
     name: "Front Raises",
     bodyPart: "Shoulders",
-    videoLink: "https://www.example.com/front-raises-video",
+    videoLink: "https://youtu.be/-t7fuZ0KhDA",
     instructions: [
       "Stand with dumbbells in front of your thighs.",
       "Raise the dumbbells to shoulder level.",
@@ -265,7 +265,7 @@ function UserProgram(name, exercises) {
   {
     name: "Face Pulls",
     bodyPart: "Shoulders",
-    videoLink: "https://www.example.com/face-pulls-video",
+    videoLink: "https://youtu.be/V8dZ3pyiCBo",
     instructions: [
       "Attach a rope to a cable machine at eye level.",
       "Pull the rope towards your face, squeezing your rear delts.",
@@ -275,7 +275,7 @@ function UserProgram(name, exercises) {
   {
     name: "Rear Delt Flys",
     bodyPart: "Shoulders",
-    videoLink: "https://www.example.com/rear-delt-flys-video",
+    videoLink: "https://youtu.be/0GSu6Z-Oj7U",
     instructions: [
       "Bend forward at the hips with dumbbells in hand.",
       "Raise the dumbbells to the sides, squeezing your rear delts.",
@@ -287,7 +287,7 @@ function UserProgram(name, exercises) {
   {
     name: "Bike",
     bodyPart: "Cardio",
-    videoLink: "https://www.example.com/bike-video",
+    videoLink: "https://youtu.be/r9d3SUPlMOw",
     instructions: [
       "Sit on a stationary bike.",
       "Pedal at a steady pace.",
@@ -297,7 +297,7 @@ function UserProgram(name, exercises) {
   {
     name: "Treadmill",
     bodyPart: "Cardio",
-    videoLink: "https://www.example.com/treadmill-video",
+    videoLink: "https://youtu.be/8i3Vrd95o2k",
     instructions: [
       "Stand on a treadmill.",
       "Start walking or running at your desired speed.",
@@ -309,7 +309,7 @@ function UserProgram(name, exercises) {
   {
     name: "Hanging Leg Raises",
     bodyPart: "Abs",
-    videoLink: "https://www.example.com/hanging-leg-raises-video",
+    videoLink: "https://youtu.be/j-vjZlP_mP8",
     instructions: [
       "Hang from a pull-up bar.",
       "Raise your legs until they're parallel to the ground.",
@@ -319,7 +319,7 @@ function UserProgram(name, exercises) {
   {
     name: "Planks",
     bodyPart: "Abs",
-    videoLink: "https://www.example.com/planks-video",
+    videoLink: "https://youtu.be/rerKy2AEHz4",
     instructions: [
       "Start in a push-up position with your elbows on the ground.",
       "Keep your body in a straight line.",
@@ -329,7 +329,7 @@ function UserProgram(name, exercises) {
   {
     name: "Hanging Leg Raise Side to Side",
     bodyPart: "Abs",
-    videoLink: "https://www.example.com/hanging-leg-raise-side-to-side-video",
+    videoLink: "https://youtu.be/O_JUtT-4Mrk",
     instructions: [
       "Hang from a pull-up bar.",
       "Raise your legs to one side as far as you can.",
@@ -339,7 +339,7 @@ function UserProgram(name, exercises) {
   {
     name: "Mason Twist",
     bodyPart: "Abs",
-    videoLink: "https://www.example.com/mason-twist-video",
+    videoLink: "https://youtu.be/j-vjZlP_mP8",
     instructions: [
       "Sit on the floor with your knees bent and feet lifted.",
       "Twist your torso to one side, then the other.",
@@ -402,7 +402,13 @@ function UserProgram(name, exercises) {
     let vidLink = document.createElement('a');
     vidLink.setAttribute('class', 'vid-link-item');
     vidLink.innerHTML = exercise.videoLink;
+    // vidLink.addEventListener(click, function(event)){
+    //   window.open(exercise.videoLink, '_blank')
+    // }
     info.appendChild(vidLink);
+    vidLink.addEventListener('click', function(event) {
+      window.open(exercise.videoLink, '_blank');
+    });
 
     let descriptionList = document.createElement('ol');
     descriptionList.setAttribute('class', 'description-list');
