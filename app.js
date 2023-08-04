@@ -156,6 +156,15 @@ function displaySelectedExercises() {
     deleteButton.onclick = function () {
       removeExercise(exercise);
     };
+  
+   
+    deleteButton.style.padding = '5px';
+    deleteButton.style.borderRadius = '5px';
+    deleteButton.style.backgroundColor = '#252627';
+    deleteButton.style.color = 'rgb(189, 182, 182)';
+    deleteButton.style.fontSize = '14px';
+    deleteButton.style.fontFamily = ' Courier New, Courier, monospace';
+    
     exerciseDiv.appendChild(deleteButton);
     selectedExercisesDiv.appendChild(exerciseDiv);
   }
