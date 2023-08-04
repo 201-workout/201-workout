@@ -10,6 +10,28 @@ const selectedExercisesDiv = document.getElementById('selected_exercises');
 let selectedExercises = [];
 // let workouts = [];
 
+// display created workout on home page
+function displayWorkouts(currentUser) {
+  for (let i = 0; i < currentUser.workouts.length; i++) {
+    let workoutList = document.getElementById('program-list');
+    let newWorkoutElement = document.createElement('div');
+    newWorkoutElement.setAttribute('class', 'workout-element');
+    newWorkoutElement.textContent = `${currentUser.workouts[i].workoutName}`;
+    workoutList.appendChild(newWorkoutElement);
+
+  }
+    console.log(currentUser);
+  
+}
+
+if (window.location.pathname === "/index.html") {
+  currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  let userTitle = document.getElementById('user-name-title');
+  userTitle.textContent = currentUser.name;
+  console.log('LOG HERE');
+  displayWorkouts(currentUser);
+}
+
 // Populates the dropdown with exercise names
 for (let i = 0; i < exerciseDetails.length; i++) {
   const exercise = exerciseDetails[i];
@@ -19,6 +41,7 @@ for (let i = 0; i < exerciseDetails.length; i++) {
   exerciseDropdown.appendChild(exerciseOption);
 }
 
+console.log("LOGGED TOP PAGE");
 exerciseTypeDropdown.addEventListener('change', handleExerciseTypeChange);
 
 // Function to handle exercise type change
@@ -149,19 +172,12 @@ function createWorkout() {
 
 
 
-// display created workout on home page
-// function displayWorkout(workout) {
-//   let workoutList = document.getElementById('program-list');
-//   let newWorkoutElement = document.createElement('div');
-//   newWorkoutElement.setAttribute('class', 'workout-element');
-//   newWorkoutElement.textContent = `${workout.name}`;
-//   workoutList.appendChild(newWorkoutElement);
-// }
 
-// document.getElementById('submit-workout').addEventListener('click', function(event) {
-//   let workout = createWorkout();
-//   displayWorkout(workout);
-// })
+
+
+
+
+
 
 // UserExercise constructor
 function UserExercise(name, bodyPart, type, sets, time, distance, reps) {
