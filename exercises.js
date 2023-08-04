@@ -230,6 +230,224 @@ function UserProgram(name, exercises) {
       "Press the barbell back up.",
     ],
   },
+  {
+    name: "Lateral Raises",
+    bodyPart: "Shoulders",
+    videoLink: "https://youtu.be/i5fIB4Gqaec",
+    instructions: [
+      "Set the pulleys to the highest position.",
+      "Extend your arms forward.",
+      "Squeeze your chest at the peak position.",
+    ],
+  },
+  {
+    name: "Overhead Press",
+    bodyPart: "Shoulders",
+    videoLink: "https://youtu.be/2yjwXTZQDDI",
+    instructions: [
+      "Sit on an incline bench holding dumbbells.",
+      "Lower the dumbbells to your sides.",
+      "Press the dumbbells up.",
+    ],
+  },
+  {
+    name: "Front Raises",
+    bodyPart: "Shoulders",
+    videoLink: "https://youtu.be/-t7fuZ0KhDA",
+    instructions: [
+      "Stand with dumbbells in front of your thighs.",
+      "Raise the dumbbells to shoulder level.",
+      "Lower the dumbbells back down.",
+    ],
+  },
+  {
+    name: "Face Pulls",
+    bodyPart: "Shoulders",
+    videoLink: "https://youtu.be/V8dZ3pyiCBo",
+    instructions: [
+      "Attach a rope to a cable machine at eye level.",
+      "Pull the rope towards your face, squeezing your rear delts.",
+      "Release the rope back to the starting position.",
+    ],
+  },
+  {
+    name: "Rear Delt Flys",
+    bodyPart: "Shoulders",
+    videoLink: "https://youtu.be/0GSu6Z-Oj7U",
+    instructions: [
+      "Bend forward at the hips with dumbbells in hand.",
+      "Raise the dumbbells to the sides, squeezing your rear delts.",
+      "Lower the dumbbells back down.",
+    ],
+  },
+
+  // Legs
+  {
+    name: "Bike",
+    bodyPart: "Cardio",
+    videoLink: "https://youtu.be/r9d3SUPlMOw",
+    instructions: [
+      "Place a barbell on your upper back.",
+      "Squat down by bending your knees and hips.",
+      "Stand back up to the starting position.",
+    ],
+  },
+  {
+    name: "Treadmill",
+    bodyPart: "Cardio",
+    videoLink: "https://youtu.be/8i3Vrd95o2k",
+    instructions: [
+      "Stand with one foot forward and the other back.",
+      "Lower your body by bending your knees.",
+      "Push back up to the starting position.",
+    ],
+  },
+  {
+    name: "Leg Extensions",
+    bodyPart: "Legs",
+    videoLink: "https://www.example.com/leg-extensions-video",
+    instructions: [
+      "Sit on a leg extension machine.",
+      "Extend your legs fully.",
+      "Lower the weight back down.",
+    ],
+  },
+  {
+    name: "Straight Leg Deadlift",
+    bodyPart: "Legs",
+    videoLink: "https://www.example.com/straight-leg-deadlift-video",
+    instructions: [
+      "Hold a barbell with a shoulder-width grip.",
+      "Hinge at your hips and lower the barbell.",
+      "Stand back up to the starting position.",
+    ],
+  },
+  {
+    name: "Dumbbell Calf Raise",
+    bodyPart: "Legs",
+    videoLink: "https://www.example.com/dumbbell-calf-raise-video",
+    instructions: [
+      "Hold dumbbells in each hand.",
+      "Raise your heels off the ground.",
+      "Lower your heels back down.",
+    ],
+  },
+
+  // Back
+  {
+    name: "Hanging Leg Raises",
+    bodyPart: "Abs",
+    videoLink: "https://youtu.be/j-vjZlP_mP8",
+    instructions: [
+      "Bend over with your knees slightly bent.",
+      "Pull the barbell towards your torso.",
+      "Lower the barbell back down.",
+    ],
+  },
+  {
+    name: "Planks",
+    bodyPart: "Abs",
+    videoLink: "https://youtu.be/rerKy2AEHz4",
+    instructions: [
+      "Hang from a pull-up bar with your palms facing away.",
+      "Pull yourself up until your chin is above the bar.",
+      "Lower yourself back down.",
+    ],
+  },
+  {
+    name: "Hanging Leg Raise Side to Side",
+    bodyPart: "Abs",
+    videoLink: "https://youtu.be/O_JUtT-4Mrk",
+    instructions: [
+      "Sit at a lat pulldown machine with a neutral grip.",
+      "Pull the bar down to your chest.",
+      "Release the bar back up.",
+    ],
+  },
+  {
+    name: "Mason Twist",
+    bodyPart: "Abs",
+    videoLink: "https://youtu.be/j-vjZlP_mP8",
+    instructions: [
+      "Stand with your feet hip-width apart.",
+      "Bend down and grab the barbell with an overhand grip.",
+      "Lift the bar by extending your hips and knees.",
+    ],
+  },
+  {
+    name: "Neutral Grip Cable Row",
+    bodyPart: "Back",
+    videoLink: "https://www.example.com/neutral-grip-cable-row-video",
+    instructions: [
+      "Sit at a cable row machine with a neutral grip.",
+      "Pull the handles towards your torso.",
+      "Return the handles forward.",
+    ],
+  },
+
+  // Biceps
+{
+  name: "Barbell Curls",
+  bodyPart: "Biceps",
+  videoLink: "https://www.example.com/barbell-curls-video",
+  instructions: [
+    "Hold a barbell with your palms facing up.",
+    "Curl the barbell towards your shoulders.",
+    "Lower the barbell back down.",
+  ],
+},
+{
+  name: "Dumbbell Hammer Curls",
+  bodyPart: "Biceps",
+  videoLink: "https://www.example.com/dumbbell-hammer-curls-video",
+  instructions: [
+    "Hold dumbbells with your palms facing your body.",
+    "Curl the dumbbells towards your shoulders.",
+    "Lower the dumbbells back down.",
+  ],
+},
+{
+  name: "Preacher Curls",
+  bodyPart: "Biceps",
+  videoLink: "https://www.example.com/preacher-curls-video",
+  instructions: [
+    "Sit at a preacher curl bench.",
+    "Curl the barbell towards your shoulders.",
+    "Lower the barbell back down.",
+  ],
+},
+
+// Triceps
+{
+  name: "Cable Push Downs",
+  bodyPart: "Triceps",
+  videoLink: "https://www.example.com/cable-push-downs-video",
+  instructions: [
+    "Stand at a cable station with a straight bar attachment.",
+    "Push the bar down until your arms are fully extended.",
+    "Return the bar back up.",
+  ],
+},
+{
+  name: "Skull Crushers",
+  bodyPart: "Triceps",
+  videoLink: "https://www.example.com/skull-crushers-video",
+  instructions: [
+    "Lie on a flat bench with a barbell.",
+    "Lower the barbell towards your forehead.",
+    "Extend your arms to lift the barbell back up.",
+  ],
+},
+{
+  name: "Close Grip Bench Press",
+  bodyPart: "Triceps",
+  videoLink: "https://www.example.com/close-grip-bench-press-video",
+  instructions: [
+    "Lie on a flat bench with a narrow grip on the barbell.",
+    "Lower the barbell to your chest.",
+    "Press the barbell back up.",
+  ],
+},
 
   // Shoulders
   {
@@ -349,8 +567,14 @@ function UserProgram(name, exercises) {
 
 ];
   
+  
 
 
+// append exercises to exercise list page
+for (let i = 0; i < exerciseDetails.length; i++) {
+  const exercise = exerciseDetails[i]
+  if (exercise['bodyPart'] === "Chest") {
+    appendExerciseSection('chest-title', exercise);
 // append exercises to exercise list page
 for (let i = 0; i < exerciseDetails.length; i++) {
   const exercise = exerciseDetails[i]
@@ -359,7 +583,11 @@ for (let i = 0; i < exerciseDetails.length; i++) {
 
   } else if (exercise['bodyPart'] === "Back") {
     appendExerciseSection('back-title', exercise);
+  } else if (exercise['bodyPart'] === "Back") {
+    appendExerciseSection('back-title', exercise);
 
+  } else if (exercise['bodyPart'] === "Legs") {
+    appendExerciseSection('legs-title', exercise);
   } else if (exercise['bodyPart'] === "Legs") {
     appendExerciseSection('legs-title', exercise);
 
