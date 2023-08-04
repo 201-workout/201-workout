@@ -24,16 +24,25 @@ li a {
     background-color: #111;
 }
 
+/* Login page  */
 #login-box {
-    border:thin solid red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    justify-content: center;
+  color: rgb(211, 202, 202);
+  /* background-color: rgba(255, 0, 0, 0.353);  */
+  background-color: rgba(0, 0, 0, 0.353);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
 }
 
 #login-body {
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     margin: 0;
     display: flex;
     align-items: center;
@@ -43,11 +52,13 @@ li a {
 
 #create-account {
     display: flex;
-    border:thin solid red;
+    /* border:thin solid red; */
     flex-direction: column;
     /* align-items: center; */
     padding: 20px;
+    padding-bottom: 0px;
     justify-content: space-between;
+    /* background-color: rgba(0, 0, 0, 0.353);  */
 }
 
 #break {
@@ -60,6 +71,7 @@ li a {
 .login-hr {
     width: 150px;
     height: 0;
+    border-color: #111;
 }
 
 #name-input {
@@ -75,10 +87,27 @@ li a {
 
 #user-name-login {
     padding:0px;
+    background-color: rgba(0, 0, 0, 0.353);
+    color: rgb(189, 182, 182);
+    
+}
+
+#user-name-login::placeholder {
+  color: rgb(189, 182, 182);
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .create-input {
     margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.353); 
+    color: rgb(189, 182, 182);
+
+}
+
+.create-input::placeholder {
+  color: rgb(189, 182, 182);
+  font-family: 'Courier New', Courier, monospace;
 }
 
 #submit-button-section {
@@ -92,10 +121,43 @@ li a {
 } 
 
 #login-form {
-  border:thin solid red;
   padding: 20px;
+  padding-top: 0px;
+  
+  /* background-color: rgba(0, 0, 0, 0.353); */
 }
 
+.login-page-buttons {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #252627; 
+  color: rgb(189, 182, 182);
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.login-page-buttons:hover {
+    background-color: rgba(255, 0, 0, 0.353);
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+/* Nav bar */
 .nav-bar {
   height: 100px;
   border: solid thin black;
