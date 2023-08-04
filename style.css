@@ -1,0 +1,435 @@
+
+#exerciseUl {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#list {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.list a:hover {
+    background-color: #111;
+}
+
+/* Login page  */
+#login-box {
+  color: rgb(211, 202, 202);
+  /* background-color: rgba(255, 0, 0, 0.353);  */
+  background-color: rgba(0, 0, 0, 0.353);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  border: thin solid black;
+}
+
+#login-body {
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#create-account {
+    display: flex;
+    /* border:thin solid red; */
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 20px;
+    padding-bottom: 0px;
+    justify-content: space-between;
+    /* background-color: rgba(0, 0, 0, 0.353);  */
+}
+
+#break {
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    /* margin-bottom: 10px; */
+}
+
+.login-hr {
+    width: 150px;
+    height: 0;
+    border-color: #111;
+}
+
+#name-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+#name-input label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#user-name-login {
+    padding:0px;
+    background-color: rgba(0, 0, 0, 0.353);
+    color: rgb(189, 182, 182);
+    
+}
+
+#user-name-login::placeholder {
+  color: rgb(189, 182, 182);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.create-input {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.353); 
+    color: rgb(189, 182, 182);
+
+}
+
+.create-input::placeholder {
+  color: rgb(189, 182, 182);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#submit-button-section {
+    display: flex;
+    justify-content: center;
+ }  
+
+#login-button-section {
+  display: flex;
+  justify-content: center;
+} 
+
+#login-form {
+  padding: 20px;
+  padding-top: 0px;
+  
+  /* background-color: rgba(0, 0, 0, 0.353); */
+}
+
+.login-page-buttons {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #252627; 
+  color: rgb(189, 182, 182);
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.login-page-buttons:hover {
+    background-color: rgba(255, 0, 0, 0.353);
+    color: #111;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+/* Home page */
+#homepage-body {
+  font-family: 'Courier New', Courier, monospace;
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
+  margin: 0;
+  height: 100vh;
+  color: rgb(211, 202, 202);
+}
+
+/* Nav bar */
+.nav-bar {
+  height: 80px;
+  border: solid thin black;
+  display: flex;
+  justify-content: right;
+  /* background-color: rgba(0, 0, 0, 0.353); */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-items {
+  display: flex;
+  height:80px;
+  width: 400px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-items a {
+  text-decoration: none;
+  display: flex;
+  height: 50px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 5px;
+  border: thin solid black;
+  background-color: rgba(0, 0, 0, 0.353);
+  color: rgb(189, 182, 182);
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-items a:hover {
+  background-color: rgba(255, 0, 0, 0.353);
+}
+
+/*  */
+
+/* Exercises page */
+
+#body-exercises {
+  font-family: 'Courier New', Courier, monospace;
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-position: center center;
+  margin: 0;
+  height: 100vh;
+  color: rgb(211, 202, 202);
+}
+
+#program-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#welcome-title {
+  display: flex;
+  justify-content: center;
+  margin-left: 30px;
+  padding: 15px;
+  font-size: 40px;
+}
+
+#create-workout-btn-container{
+  display: flex;
+  justify-content: center;
+  
+}
+
+#create-workout {
+  margin: 50px;
+  height: 35px;
+  width: fit-content;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 10px;
+  background-color: #252627; 
+  color: rgb(189, 182, 182);
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#create-workout:hover {
+  background-color: rgba(255, 0, 0, 0.353);
+  color: #111;
+}
+
+.workout-element:hover {
+  background-color: rgba(255, 0, 0, 0.353);
+}
+
+/* START filter menu for exercise list page */
+#icon-container {
+  display: flex;
+  justify-content: right;
+}
+
+#menu-icon {
+  height: 70px;
+  border: thin solid black;
+}
+/* END */
+
+
+.workout-element {
+  /* display: flex; */
+  margin-top: 30px;
+  min-height: 100px;
+  width: 600px;
+  border: thin solid black;
+  background-color: rgba(0, 0, 0, 0.353);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 50px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+#filter-list {
+  border: thin solid black;
+  padding: 30px;
+}
+
+#filter-list li {
+  font-size: 20px;
+  margin: 10px;
+}
+
+/* START styles each exercise section added through DOM */
+.exercise-list-item {
+    margin: 15px;
+    width: 400px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: (2, 1fr); /* Two equal-width columns per row */
+    grid-auto-rows: fr; /* Each row will have an equal height */
+    grid-gap: 10px; /* Adds spacing between grid items */
+}
+
+
+/* .img-list-item {
+  border: thin dashed red;
+  height: 300px;
+  width: 300px;
+  margin-right: 10px;
+} */
+
+.vid-link-item {
+  /* border: thin solid purple; */
+  margin: 10px;
+}
+
+.description-list {
+  margin: 10px;
+  margin-left: 20px;
+}
+
+.description-list-item {
+  margin: 20px;
+}
+
+
+.part-title {
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  font-weight: bold;
+}
+
+.workout-img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-item {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.info-item {
+  border-radius: 10px;
+  background-color: #252627; 
+  color: rgb(189, 182, 182);
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* Workout Page */
+
+#workout-body{
+  font-family: 'Courier New', Courier, monospace;
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center center;
+  margin: 0;
+  height: 100vh;
+  color: rgb(211, 202, 202);
+
+}
+
+#workout-body main {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#workoutForm{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(211, 202, 202);
+  background-color: rgba(0, 0, 0, 0.353);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  border: thin solid black;
+}
+
+
+.workout-input-box {
+  padding:0px;
+  background-color: rgba(0, 0, 0, 0.353);
+  color: rgb(189, 182, 182);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.workout-button {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #252627; 
+  color: rgb(189, 182, 182);
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.workout-button:hover {
+    background-color: rgba(255, 0, 0, 0.353);
+    color: #111;
+}
