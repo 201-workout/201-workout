@@ -5,8 +5,17 @@ const timeInputDiv = document.getElementById('time_input');
 const distanceInputDiv = document.getElementById('distance_input');
 const exerciseDetailsDiv = document.getElementById('exercise_details');
 const selectedExercisesDiv = document.getElementById('selected_exercises');
+const createWorkoutForm = document.getElementById('workoutForm');
+
+if (createWorkoutForm) {
+  createWorkoutForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    createWorkout();
+  });
+}
 
 let selectedExercises = [];
+let dontUse = ['type', 'bodyPart'];
 
 // display created workout on home page
 function displayWorkouts(currentUser) {
@@ -20,12 +29,14 @@ function displayWorkouts(currentUser) {
       let exercisesElement  = document.createElement('section');
       for (let j = 0; j < currentUser.workouts[i].userExercises.length; j++) {
         for (let key in currentUser.workouts[i].userExercises[j]) {
-          let pEl = document.createElement('p');
-          pEl.textContent = `${key} : ${currentUser.workouts[i].userExercises[j][key]}`;
-          exercisesElement.appendChild(pEl);
+          if (!dontUse.includes(key)) {
+            let pEl = document.createElement('p');
+            pEl.textContent = `${key} : ${currentUser.workouts[i].userExercises[j][key]}`;
+            exercisesElement.appendChild(pEl);
+          }
         }
         newWorkoutElement.appendChild(exercisesElement);
-        // console.log(currentUser.workouts[i].userExercises[j]);
+      
       }
 
     }
@@ -179,116 +190,6 @@ function createWorkout() {
 
   return newWorkout;
 }
-
-
-
-// JavaScript Code
-// function displayWorkouts(currentUser) {
-//   let workoutList = document.getElementById('program-list');
-
-//   for (let i = 0; i < currentUser.workouts.length; i++) {
-//     let newWorkoutElement = document.createElement('div');
-//     newWorkoutElement.setAttribute('class', 'workout-element');
-
-//     let workoutTitle = document.getElementById('program-list').createElement('h3');
-//     workoutTitle.setAttribute('workout-clickable');
-//     workoutTitle.textContent = `${currentUser.workouts[i].workoutName}`;
-//     newWorkoutElement.appendChild(workoutTitle);
-
-//     let workoutExercises = document.createElement('div');
-//     workoutExercises.setAttribute('class', 'workout-details');
-//     newWorkoutElement.appendChild(workoutExercises);
-
-//     for (let j = 0; j < currentUser.workouts.userExercises.length; j++) {
-//       let exerciseSection = document.createElement('section');
-//       exerciseSection.setAttribute('class', 'exercise-item');
-//       newWorkoutElement.appendChild(exerciseSection);
-  
-//       let exerciseName = document.createElement('p');
-//       exerciseName.textContent = `${currentUser.workouts[i][j].name}`;
-//       exerciseSection.appendChild(exerciseName);
-
-//       let exerciseInfo = document.createElement('p');
-//       if (currentUser.workouts[i][j].type === 'sets') {
-//         exerciseInfo.textContent = `Sets: ${currentUser.workouts[i][j].sets}, Reps: ${currentUser.workouts[i][j].reps}`;
-//       } else if (currentUser.workouts[i][j].type === 'time') {
-//         exerciseInfo.textContent = `Time: ${currentUser.workouts[i][j].time}`;
-//       } else if (currentUser.workouts[i][j].type === 'distance') {
-//         exerciseInfo.textContent = `Distance: ${currentUser.workouts[i][j].distance}`;
-//       }
-//       exerciseSection.appendChild(exerciseInfo);
-//     }
-
-//     workoutList.appendChild(newWorkoutElement);
-
-
-
-
-
-//     workoutList.appendChild(newWorkoutElement);
-//   }
-// }
-
-// function displayWorkouts(currentUser) {
-//   let workoutList = document.getElementById('program-list');
-
-//   for (let i = 0; i < currentUser.workouts.length; i++) {
-//     let newWorkoutElement = document.createElement('div');
-//     newWorkoutElement.setAttribute('class', 'workout-element');
-
-//     // Workout Title (Clickable)
-//     let workoutTitle = document.createElement('h3');
-//     workoutTitle.textContent = `${currentUser.workouts[i].workoutName}`;
-//     newWorkoutElement.appendChild(workoutTitle);
-
-//     // Workout Exercises Details
-//     let workoutExercises = document.createElement('div');
-//     workoutExercises.setAttribute('class', 'workout-details');
-//     newWorkoutElement.appendChild(workoutExercises);
-
-//     // Loop through workout exercises
-//     for (let j = 0; j < currentUser.workouts[i].userExercises.length; j++) {
-//       let exerciseSection = document.createElement('section');
-//       exerciseSection.setAttribute('class', 'exercise-item');
-//       workoutExercises.appendChild(exerciseSection);
-
-//       let exerciseName = document.createElement('p');
-//       exerciseName.textContent = `${currentUser.workouts[i].userExercises[j].name}`;
-//       exerciseSection.appendChild(exerciseName);
-
-//       let exerciseInfo = document.createElement('p');
-//       if (currentUser.workouts[i].userExercises[j].type === 'sets') {
-//         exerciseInfo.textContent = `Sets: ${currentUser.workouts[i].userExercises[j].sets}, Reps: ${currentUser.workouts[i].userExercises[j].reps}`;
-//       } else if (currentUser.workouts[i].userExercises[j].type === 'time') {
-//         exerciseInfo.textContent = `Time: ${currentUser.workouts[i].userExercises[j].time}`;
-//       } else if (currentUser.workouts[i].userExercises[j].type === 'distance') {
-//         exerciseInfo.textContent = `Distance: ${currentUser.workouts[i].userExercises[j].distance}`;
-//       }
-//       exerciseSection.appendChild(exerciseInfo);
-//     }
-
-//     workoutList.appendChild(newWorkoutElement);
-//   }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // UserExercise constructor
 function UserExercise(name, bodyPart, type, sets, time, distance, reps) {
