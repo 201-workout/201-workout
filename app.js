@@ -6,31 +6,28 @@ const distanceInputDiv = document.getElementById('distance_input');
 const exerciseDetailsDiv = document.getElementById('exercise_details');
 const selectedExercisesDiv = document.getElementById('selected_exercises');
 
-
 let selectedExercises = [];
-// let workouts = [];
 
 // display created workout on home page
-function displayWorkouts(currentUser) {
-  for (let i = 0; i < currentUser.workouts.length; i++) {
-    let workoutList = document.getElementById('program-list');
-    let newWorkoutElement = document.createElement('div');
-    newWorkoutElement.setAttribute('class', 'workout-element');
-    newWorkoutElement.textContent = `${currentUser.workouts[i].workoutName}`;
-    workoutList.appendChild(newWorkoutElement);
+// function displayWorkouts(currentUser) {
+//   let workoutList = document.getElementById('program-list');
+//   for (let i = 0; i < currentUser.workouts.length; i++) {
+//     let newWorkoutElement = document.createElement('div');
+//     newWorkoutElement.setAttribute('class', 'workout-element');
+//     newWorkoutElement.textContent = `${currentUser.workouts[i].workoutName}`;
+//     workoutList.appendChild(newWorkoutElement);
 
-  }
-    console.log(currentUser);
-  
-}
+//   }
+// }
 
 if (window.location.pathname === "/index.html") {
   currentUser = JSON.parse(localStorage.getItem('currentUser'));
   let userTitle = document.getElementById('user-name-title');
   userTitle.textContent = currentUser.name;
-  console.log('LOG HERE');
   displayWorkouts(currentUser);
 }
+
+
 
 // Populates the dropdown with exercise names
 for (let i = 0; i < exerciseDetails.length; i++) {
@@ -41,7 +38,6 @@ for (let i = 0; i < exerciseDetails.length; i++) {
   exerciseDropdown.appendChild(exerciseOption);
 }
 
-console.log("LOGGED TOP PAGE");
 exerciseTypeDropdown.addEventListener('change', handleExerciseTypeChange);
 
 // Function to handle exercise type change
@@ -169,6 +165,59 @@ function createWorkout() {
 
   return newWorkout;
 }
+
+
+
+// JavaScript Code
+function displayWorkouts(currentUser) {
+  let workoutList = document.getElementById('program-list');
+
+  for (let i = 0; i < currentUser.workouts.length; i++) {
+    let newWorkoutElement = document.createElement('div');
+    newWorkoutElement.setAttribute('class', 'workout-element');
+    newWorkoutElement.textContent = `${currentUser.workouts[i].workoutName}`;
+    
+    // Create a div to hold the exercises associated with this workout
+    let exerciseList = document.createElement('div');
+    exerciseList.setAttribute('class', 'exercise-list');
+    exerciseList.style.border = 'thin solid black';
+    // exerciseList.style.height = '400px';
+    
+    exerciseList.style.backgroundColor = 'black';
+    exerciseList.style.color = 'white';
+    // exerciseList.textContent.style.color = 'white';
+    exerciseList.style.display = 'none'; // Initially hide the exercise list
+
+    // Add exercises to the exerciseList div
+    for (let j = 0; j < currentUser.workouts[i].userExercises.length; j++) {
+      let exerciseName = currentUser.workouts[i].userExercises[j].name;
+      let exerciseElement = document.createElement('div');
+      exerciseElement.textContent = `${exerciseName}`;
+      
+      exerciseList.appendChild(exerciseElement);
+    }
+
+    // Append the exerciseList div to the workout element
+    newWorkoutElement.appendChild(exerciseList);
+
+    // Add a click event listener to each workout element
+    newWorkoutElement.addEventListener('click', function () {
+      // Toggle the visibility of the exerciseList when clicked
+      exerciseList.style.display = exerciseList.style.display === 'none' ? 'block' : 'none';
+    });
+
+    workoutList.appendChild(newWorkoutElement);
+  }
+}
+
+
+
+
+
+
+
+
+
 
 
 

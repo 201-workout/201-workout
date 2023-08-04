@@ -431,3 +431,5 @@ function appendExerciseSection(bodyPartId, exercise) {
     referenceNode.after(section);
 }
 
+
+

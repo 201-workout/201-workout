@@ -24,16 +24,26 @@ li a {
     background-color: #111;
 }
 
+/* Login page  */
 #login-box {
-    border:thin solid red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    justify-content: center;
+  color: rgb(211, 202, 202);
+  /* background-color: rgba(255, 0, 0, 0.353);  */
+  background-color: rgba(0, 0, 0, 0.353);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: large;
+  border: thin solid black;
 }
 
 #login-body {
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     margin: 0;
     display: flex;
     align-items: center;
@@ -43,11 +53,13 @@ li a {
 
 #create-account {
     display: flex;
-    border:thin solid red;
+    /* border:thin solid red; */
     flex-direction: column;
     /* align-items: center; */
     padding: 20px;
+    padding-bottom: 0px;
     justify-content: space-between;
+    /* background-color: rgba(0, 0, 0, 0.353);  */
 }
 
 #break {
@@ -60,6 +72,7 @@ li a {
 .login-hr {
     width: 150px;
     height: 0;
+    border-color: #111;
 }
 
 #name-input {
@@ -75,10 +88,27 @@ li a {
 
 #user-name-login {
     padding:0px;
+    background-color: rgba(0, 0, 0, 0.353);
+    color: rgb(189, 182, 182);
+    
+}
+
+#user-name-login::placeholder {
+  color: rgb(189, 182, 182);
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .create-input {
     margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.353); 
+    color: rgb(189, 182, 182);
+
+}
+
+.create-input::placeholder {
+  color: rgb(189, 182, 182);
+  font-family: 'Courier New', Courier, monospace;
 }
 
 #submit-button-section {
@@ -92,33 +122,109 @@ li a {
 } 
 
 #login-form {
-  border:thin solid red;
   padding: 20px;
+  padding-top: 0px;
+  
+  /* background-color: rgba(0, 0, 0, 0.353); */
 }
 
+.login-page-buttons {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #252627; 
+  color: rgb(189, 182, 182);
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.login-page-buttons:hover {
+    background-color: rgba(255, 0, 0, 0.353);
+    color: #111;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+/* Home page */
+#homepage-body {
+  font-family: 'Courier New', Courier, monospace;
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0;
+  height: 100vh;
+  color: rgb(211, 202, 202);
+}
+
+/* Nav bar */
 .nav-bar {
-  height: 100px;
+  height: 80px;
   border: solid thin black;
   display: flex;
   justify-content: right;
+  /* background-color: rgba(0, 0, 0, 0.353); */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .nav-items {
   display: flex;
-  border: solid thin blue;
-  height:100px;
-  width: 500px;
+  height:80px;
+  width: 400px;
   justify-content: space-around;
   align-items: center;
 }
 
-.nav-items nav-item {
+.nav-items a {
+  text-decoration: none;
   display: flex;
   height: 50px;
   width: 100px;
-  border: solid thin red;
   align-items: center;
   justify-content: center;
+  padding: 5px;
+  border-radius: 5px;
+  border: thin solid black;
+  background-color: rgba(0, 0, 0, 0.353);
+  color: rgb(189, 182, 182);
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-items a:hover {
+  background-color: rgba(255, 0, 0, 0.353);
+}
+
+/*  */
+
+/* Exercises page */
+
+#body-exercises {
+  font-family: 'Courier New', Courier, monospace;
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-position: center center;
+  margin: 0;
+  height: 100vh;
+  color: rgb(211, 202, 202);
+  
 }
 
 #program-list {
@@ -128,7 +234,8 @@ li a {
 }
 
 #welcome-title {
-  margin-top: 30px;
+  display: flex;
+  justify-content: center;
   margin-left: 30px;
   padding: 15px;
   font-size: 40px;
@@ -137,6 +244,7 @@ li a {
 #create-workout-btn-container{
   display: flex;
   justify-content: center;
+  
 }
 
 #create-workout {
@@ -146,8 +254,20 @@ li a {
   padding-left: 100px;
   padding-right: 100px;
   border-radius: 10px;
-  background-color: rgb(219, 219, 242);
-  border-color: blue;
+  background-color: #252627; 
+  color: rgb(189, 182, 182);
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#create-workout:hover {
+  background-color: rgba(255, 0, 0, 0.353);
+  color: #111;
+}
+
+.workout-element:hover {
+  background-color: rgba(255, 0, 0, 0.353);
 }
 
 /* START filter menu for exercise list page */
@@ -162,9 +282,6 @@ li a {
 }
 /* END */
 
-.part-title {
-  font-size: 50px;
-}
 
 .workout-element {
   display: flex;
@@ -172,7 +289,10 @@ li a {
   height: 100px;
   width: 600px;
   border: thin solid black;
-  font-size: 60px;
+  background-color: rgba(0, 0, 0, 0.353);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 50px;
+  border-radius: 5px;
   justify-content: center;
   align-items: center;
 }
@@ -204,8 +324,13 @@ li a {
 
 .name-item {
   /* border: thin solid blue; */
-  font-size: 30px;
-  margin: 10px;
+  /* padding: 5px;
+  border-radius: 5px;
+  background-color: #252627; 
+  color: rgb(189, 182, 182);
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Courier New', Courier, monospace; */
 }
 
 .vid-link-item {
@@ -221,4 +346,16 @@ li a {
 .description-list-item {
   margin: 20px;
 }
-/* END */
+
+
+.part-title {
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.workout-img {
+  width: 300px;
+}
+
