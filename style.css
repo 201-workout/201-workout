@@ -169,7 +169,6 @@ li a {
   margin: 0;
   height: 100vh;
   color: rgb(211, 202, 202);
-  
 }
 
 /* Nav bar */
@@ -213,7 +212,20 @@ li a {
   background-color: rgba(255, 0, 0, 0.353);
 }
 
+/*  */
 
+/* Exercises page */
+
+#body-exercises {
+  font-family: 'Courier New', Courier, monospace;
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-position: center center;
+  margin: 0;
+  height: 100vh;
+  color: rgb(211, 202, 202);
+  
+}
 
 #program-list {
   display: flex;
@@ -270,9 +282,6 @@ li a {
 }
 /* END */
 
-.part-title {
-  font-size: 50px;
-}
 
 .workout-element {
   display: flex;
@@ -337,5 +346,16 @@ li a {
 .description-list-item {
   margin: 20px;
 }
-/* END */
+
+
+.part-title {
+  font-size: 50px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.workout-img {
+  width: 300px;
+}
 
