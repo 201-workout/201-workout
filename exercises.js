@@ -348,56 +348,56 @@ function UserProgram(name, exercises) {
   },
 
 ];
-    
-
-
-  // append exercises to exercise list page
-  for (let i = 0; i < exerciseDetails.length; i++) {
-    const exercise = exerciseDetails[i]
-    if (exercise['bodyPart'] === "Chest") {
-      appendExerciseSection('chest-title', exercise);
-
-    } else if (exercise['bodyPart'] === "Back") {
-      appendExerciseSection('back-title', exercise);
-
-    } else if (exercise['bodyPart'] === "Legs") {
-      appendExerciseSection('legs-title', exercise);
-
-    } else if (exercise['bodyPart'] === "Shoulders") {
-      appendExerciseSection('shoulders-title', exercise);
-
-    } else if (exercise['bodyPart'] === "Biceps") {
-      appendExerciseSection('biceps-title', exercise);
-
-    } else if (exercise['bodyPart'] === "Triceps") {
-      appendExerciseSection('triceps-title', exercise);
-
-    } else if (exercise['bodyPart'] === "Abs") {
-      appendExerciseSection('abs-title', exercise);
-
-    } else if (exercise['bodyPart'] === "Cardio") {
-      appendExerciseSection('cardio-title', exercise);
-    } 
-  }
   
-  // creates elements and populates them with data from exerciseDetails array
-  function appendExerciseSection(bodyPartId, exercise) {
-    let section = document.createElement('section');
-    section.setAttribute('class', 'exercise-list-item');
 
-    let img = document.createElement('img');
-    img.setAttribute('class', 'img-list-item');
-    // img.setAttribute('src', exercise.img);
-    section.appendChild(img);
 
-    let info = document.createElement('section');
-    info.setAttribute('class', 'info-item');
-    section.appendChild(info);
+// append exercises to exercise list page
+for (let i = 0; i < exerciseDetails.length; i++) {
+  const exercise = exerciseDetails[i]
+  if (exercise['bodyPart'] === "Chest") {
+    appendExerciseSection('chest-title', exercise);
 
-    let exerciseName = document.createElement('p');
-    exerciseName.setAttribute('class', 'name-item');
-    exerciseName.textContent = exercise.name;
-    info.appendChild(exerciseName);
+  } else if (exercise['bodyPart'] === "Back") {
+    appendExerciseSection('back-title', exercise);
+
+  } else if (exercise['bodyPart'] === "Legs") {
+    appendExerciseSection('legs-title', exercise);
+
+  } else if (exercise['bodyPart'] === "Shoulders") {
+    appendExerciseSection('shoulders-title', exercise);
+
+  } else if (exercise['bodyPart'] === "Biceps") {
+    appendExerciseSection('biceps-title', exercise);
+
+  } else if (exercise['bodyPart'] === "Triceps") {
+    appendExerciseSection('triceps-title', exercise);
+
+  } else if (exercise['bodyPart'] === "Abs") {
+    appendExerciseSection('abs-title', exercise);
+
+  } else if (exercise['bodyPart'] === "Cardio") {
+    appendExerciseSection('cardio-title', exercise);
+  } 
+}
+
+// creates elements and populates them with data from exerciseDetails array
+function appendExerciseSection(bodyPartId, exercise) {
+  let section = document.createElement('section');
+  section.setAttribute('class', 'exercise-list-item');
+
+  let img = document.createElement('img');
+  img.setAttribute('class', 'img-list-item');
+  // img.setAttribute('src', exercise.img);
+  section.appendChild(img);
+
+  let info = document.createElement('section');
+  info.setAttribute('class', 'info-item');
+  section.appendChild(info);
+
+  let exerciseName = document.createElement('p');
+  exerciseName.setAttribute('class', 'name-item');
+  exerciseName.textContent = exercise.name;
+  info.appendChild(exerciseName);
 
     let vidLink = document.createElement('a');
     vidLink.setAttribute('class', 'vid-link-item');
@@ -410,30 +410,30 @@ function UserProgram(name, exercises) {
       window.open(exercise.videoLink, '_blank');
     });
 
-    let descriptionList = document.createElement('ol');
-    descriptionList.setAttribute('class', 'description-list');
+  let descriptionList = document.createElement('ol');
+  descriptionList.setAttribute('class', 'description-list');
 
-    let descriptionItem1 = document.createElement('li');
-    descriptionItem1.setAttribute('type', '1');
-    descriptionItem1.setAttribute('class', 'description-list-item');
-    descriptionItem1.textContent = exercise.instructions[0]
-    descriptionList.appendChild(descriptionItem1);
+  let descriptionItem1 = document.createElement('li');
+  descriptionItem1.setAttribute('type', '1');
+  descriptionItem1.setAttribute('class', 'description-list-item');
+  descriptionItem1.textContent = exercise.instructions[0]
+  descriptionList.appendChild(descriptionItem1);
 
-    let descriptionItem2 = document.createElement('li');
-    descriptionItem2.setAttribute('type', '1');
-    descriptionItem2.setAttribute('class', 'description-list-item');
-    descriptionItem2.textContent = exercise.instructions[1]
-    descriptionList.appendChild(descriptionItem2);
+  let descriptionItem2 = document.createElement('li');
+  descriptionItem2.setAttribute('type', '1');
+  descriptionItem2.setAttribute('class', 'description-list-item');
+  descriptionItem2.textContent = exercise.instructions[1]
+  descriptionList.appendChild(descriptionItem2);
 
-    let descriptionItem3 = document.createElement('li');
-    descriptionItem3.setAttribute('type', '1');
-    descriptionItem3.setAttribute('class', 'description-list-item');
-    descriptionItem3.textContent = exercise.instructions[2]
-    descriptionList.appendChild(descriptionItem3);
+  let descriptionItem3 = document.createElement('li');
+  descriptionItem3.setAttribute('type', '1');
+  descriptionItem3.setAttribute('class', 'description-list-item');
+  descriptionItem3.textContent = exercise.instructions[2]
+  descriptionList.appendChild(descriptionItem3);
 
-    info.appendChild(descriptionList);
+  info.appendChild(descriptionList);
 
-    let referenceNode = document.getElementById(bodyPartId);
-      referenceNode.after(section);
-  }
+  let referenceNode = document.getElementById(bodyPartId);
+    referenceNode.after(section);
+}
 
