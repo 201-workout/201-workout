@@ -568,13 +568,7 @@ function UserProgram(name, exercises) {
 ];
   
   
-
-
-// append exercises to exercise list page
-for (let i = 0; i < exerciseDetails.length; i++) {
-  const exercise = exerciseDetails[i]
-  if (exercise['bodyPart'] === "Chest") {
-    appendExerciseSection('chest-title', exercise);
+ 
 // append exercises to exercise list page
 for (let i = 0; i < exerciseDetails.length; i++) {
   const exercise = exerciseDetails[i]
