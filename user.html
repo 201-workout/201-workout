@@ -5,17 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User page</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body id="User-page">
     <header>
-        <button id="Home">Home</button>
-        <button id="Exercises">Exercises</button>
+        <nav class="nav-bar">
+            <section class="nav-items">
+              <nav-item id="nav-item-home"><a href="index.html">Home</a></nav-item>
+              <nav-item id="nav-item-list"><a href="exercise-list.html">Exercise List</a></nav-item>
+            </section>
+          </nav>
     </header>
     <main>
-        <p>Name</p>
-        <p>Age</p>
-        <p>Weight</p>
+        <div>
+            <p id = 'name'></p>
+            <p id = 'age'></p>
+            <p id = 'weight'></p>
+        </div>
+        <!-- place holder start -->
         <div style="background-image: url('ImageLocation');background-size: cover; height:480px; padding-top:80px;">
             <img src="ImageFilePath" style="height:150px">
         </div>
@@ -36,5 +43,7 @@
         <p>Barbell Bench Press</p>
         <p>Row Machine</p>
     </main>
+    <script src="user.js"></script>
+    <scripy src="login.js"></scripy>
 </body>
 </html>
