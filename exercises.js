@@ -305,7 +305,7 @@ function UserProgram(name, exercises) {
   {
     name: "Leg Extensions",
     bodyPart: "Legs",
-    videoLink: "https://www.example.com/leg-extensions-video",
+    videoLink: "https://youtu.be/YyvSfVjQeL0",
     instructions: [
       "Sit on a leg extension machine.",
       "Extend your legs fully.",
@@ -315,7 +315,7 @@ function UserProgram(name, exercises) {
   {
     name: "Straight Leg Deadlift",
     bodyPart: "Legs",
-    videoLink: "https://www.example.com/straight-leg-deadlift-video",
+    videoLink: "https://youtu.be/OpzRX3slWjE",
     instructions: [
       "Hold a barbell with a shoulder-width grip.",
       "Hinge at your hips and lower the barbell.",
@@ -325,7 +325,7 @@ function UserProgram(name, exercises) {
   {
     name: "Dumbbell Calf Raise",
     bodyPart: "Legs",
-    videoLink: "https://www.example.com/dumbbell-calf-raise-video",
+    videoLink: "https://youtu.be/wwy3BSUjlW4",
     instructions: [
       "Hold dumbbells in each hand.",
       "Raise your heels off the ground.",
