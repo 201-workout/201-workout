@@ -377,7 +377,7 @@ function UserProgram(name, exercises) {
   {
     name: "Neutral Grip Cable Row",
     bodyPart: "Back",
-    videoLink: "https://www.example.com/neutral-grip-cable-row-video",
+    videoLink: "https://youtu.be/sP_4vybjVJs",
     instructions: [
       "Sit at a cable row machine with a neutral grip.",
       "Pull the handles towards your torso.",
@@ -389,7 +389,7 @@ function UserProgram(name, exercises) {
 {
   name: "Barbell Curls",
   bodyPart: "Biceps",
-  videoLink: "https://www.example.com/barbell-curls-video",
+  videoLink: "https://youtu.be/kwG2ipFRgfo",
   instructions: [
     "Hold a barbell with your palms facing up.",
     "Curl the barbell towards your shoulders.",
@@ -399,7 +399,7 @@ function UserProgram(name, exercises) {
 {
   name: "Dumbbell Hammer Curls",
   bodyPart: "Biceps",
-  videoLink: "https://www.example.com/dumbbell-hammer-curls-video",
+  videoLink: "https://youtu.be/484A0p_y0r4o",
   instructions: [
     "Hold dumbbells with your palms facing your body.",
     "Curl the dumbbells towards your shoulders.",
@@ -409,7 +409,7 @@ function UserProgram(name, exercises) {
 {
   name: "Preacher Curls",
   bodyPart: "Biceps",
-  videoLink: "https://www.example.com/preacher-curls-video",
+  videoLink: "https://youtu.be/fIWP-FRFNU0",
   instructions: [
     "Sit at a preacher curl bench.",
     "Curl the barbell towards your shoulders.",
@@ -421,7 +421,7 @@ function UserProgram(name, exercises) {
 {
   name: "Cable Push Downs",
   bodyPart: "Triceps",
-  videoLink: "https://www.example.com/cable-push-downs-video",
+  videoLink: "https://youtu.be/i5fIB4Gqaec",
   instructions: [
     "Stand at a cable station with a straight bar attachment.",
     "Push the bar down until your arms are fully extended.",
@@ -431,7 +431,7 @@ function UserProgram(name, exercises) {
 {
   name: "Skull Crushers",
   bodyPart: "Triceps",
-  videoLink: "https://www.example.com/skull-crushers-video",
+  videoLink: "https://youtu.be/S0fmDR60X-o",
   instructions: [
     "Lie on a flat bench with a barbell.",
     "Lower the barbell towards your forehead.",
@@ -441,7 +441,7 @@ function UserProgram(name, exercises) {
 {
   name: "Close Grip Bench Press",
   bodyPart: "Triceps",
-  videoLink: "https://www.example.com/close-grip-bench-press-video",
+  videoLink: "https://youtu.be/G6EsZnQMhmw",
   instructions: [
     "Lie on a flat bench with a narrow grip on the barbell.",
     "Lower the barbell to your chest.",
