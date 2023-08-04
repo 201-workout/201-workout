@@ -607,10 +607,10 @@ function appendExerciseSection(bodyPartId, exercise) {
   let section = document.createElement('section');
   section.setAttribute('class', 'exercise-list-item');
 
-  let img = document.createElement('img');
-  img.setAttribute('class', 'img-list-item');
-  // img.setAttribute('src', exercise.img);
-  section.appendChild(img);
+  // let img = document.createElement('img');
+  // img.setAttribute('class', 'img-list-item');
+  // // img.setAttribute('src', exercise.img);
+  // section.appendChild(img);
 
   let info = document.createElement('section');
   info.setAttribute('class', 'info-item');

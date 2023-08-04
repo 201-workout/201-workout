@@ -9,7 +9,7 @@ if(storageValue != null){
 }
 
 // get name from current user object and add to welcome header
-document.getElementById("welcome-title").innerHTML = "Welcome, "  + localUser.name + "!";
+// document.getElementById("welcome-title").innerHTML = "Welcome, "  + localUser.name + "!";
 
 // display the rest of current user object (age, weight, and workouts)
 document.getElementById("age").innerHTML = "Age: " + localUser.age;

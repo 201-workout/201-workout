@@ -164,7 +164,7 @@ li a {
   font-family: 'Courier New', Courier, monospace;
   background-image: url(images/background.png);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center center;
   margin: 0;
   height: 100vh;
@@ -309,29 +309,22 @@ li a {
 
 /* START styles each exercise section added through DOM */
 .exercise-list-item {
-  display: flex;
-  width: 900px;
-  /* border: thin solid black; */
-  margin: 15px;
+    margin: 15px;
+    width: 400px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: (2, 1fr); /* Two equal-width columns per row */
+    grid-auto-rows: fr; /* Each row will have an equal height */
+    grid-gap: 10px; /* Adds spacing between grid items */
 }
 
-.img-list-item {
+
+/* .img-list-item {
   border: thin dashed red;
   height: 300px;
   width: 300px;
   margin-right: 10px;
-}
-
-.name-item {
-  /* border: thin solid blue; */
-  /* padding: 5px;
-  border-radius: 5px;
-  background-color: #252627; 
-  color: rgb(189, 182, 182);
-  font-size: 14px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  font-family: 'Courier New', Courier, monospace; */
-}
+} */
 
 .vid-link-item {
   /* border: thin solid purple; */
@@ -353,9 +346,36 @@ li a {
   display: flex;
   flex-direction: column;
   margin: 20px;
+  font-weight: bold;
 }
 
 .workout-img {
   width: 300px;
+  border-radius: 10px;
 }
 
+#about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name-item {
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#exercise-list{
+
+
+}
+
+.info-item {
+  border-radius: 10px;
+  background-color: #252627; 
+  color: rgb(189, 182, 182);
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Courier New', Courier, monospace;
+}
