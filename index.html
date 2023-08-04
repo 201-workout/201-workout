@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header>
+<body id="homepage-body">
+  <header id="header-home">
     <nav class="nav-bar">
       <section class="nav-items">
         <nav-item id="nav-item-list"><a href="exercise-list.html">Exercise List</a></nav-item>
@@ -17,13 +17,13 @@
     </nav>
   </header>
   <main id="home-main">
-    <h1 id="welcome-title">Welcome, <h2 id="user-name-title"></h2></h1>
+    <h1 id="welcome-title">Hello, <span id="user-name-title"></span> ! Let's train hard!</h1>
     <section id="program-list">
-      <div class="workout-element">Full Body Workout</div>
+      <!-- <div class="workout-element">Full Body Workout</div> -->
       <!-- program list elements (divs?) get injected here from JS -->
     </section>
     <div id="create-workout-btn-container">
-      <button id="create-workout" type="submit">create new workout</button>
+      <button id="create-workout" type="submit">Create New Workout</button>
     </div>
   </main>
   <script src="page-links.js"></script>
