@@ -54,7 +54,7 @@ li a {
     display: flex;
     flex-direction: row;
     width: 400px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 .login-hr {
@@ -73,10 +73,6 @@ li a {
     margin-bottom: 10px;
 }
 
-#login-button {
-    margin-bottom: 10px;
-}
-
 #user-name-login {
     padding:0px;
 }
@@ -89,6 +85,16 @@ li a {
     display: flex;
     justify-content: center;
  }  
+
+#login-button-section {
+  display: flex;
+  justify-content: center;
+} 
+
+#login-form {
+  border:thin solid red;
+  padding: 20px;
+}
 
 .nav-bar {
   height: 100px;
@@ -128,7 +134,12 @@ li a {
   font-size: 40px;
 }
 
-#create-plan {
+#create-workout-btn-container{
+  display: flex;
+  justify-content: center;
+}
+
+#create-workout {
   margin: 50px;
   height: 35px;
   width: fit-content;
@@ -138,6 +149,7 @@ li a {
   background-color: rgb(219, 219, 242);
   border-color: blue;
 }
+
 /* START filter menu for exercise list page */
 #icon-container {
   display: flex;
@@ -154,7 +166,7 @@ li a {
   font-size: 50px;
 }
 
-#sample-exercise {
+.workout-element {
   display: flex;
   margin-top: 30px;
   height: 100px;
