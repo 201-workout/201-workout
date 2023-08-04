@@ -53,7 +53,12 @@ document.getElementById("login-button").addEventListener("click", function (even
   const name = userNameInput.value;
   const storedUsers = JSON.parse(localStorage.getItem('users'));
   if (storedUsers === null ) {
-    alert('Please create an account');
+     // Add the shake effect to the login box
+     userNameInput.classList.add('shake');
+     // Remove the shake effect after the animation ends
+     userNameInput.addEventListener('animationend', function () {
+       userNameInput.classList.remove('shake');
+     });
     userNameInput.value = '';
   } else {
     let userFound = false; 
