@@ -25,7 +25,7 @@ function getUserData() {
 
 // Event listener for the submit button
 document.getElementById('submit-button').addEventListener('click', function (event) {
-  event.preventDefault(); 
+  event.preventDefault();
   const newUser = getUserData();
   currentUser = newUser;
   localStorage.setItem('currentUser', JSON.stringify(currentUser));
@@ -61,7 +61,7 @@ document.getElementById('login-button').addEventListener('click', function (even
     });
     userNameInput.value = '';
   } else {
-    let userFound = false; 
+    let userFound = false;
     for (let i = 0; i < storedUsers.length; i++) {
       if (name === storedUsers[i].name) {
         currentUser = storedUsers[i];
@@ -70,7 +70,7 @@ document.getElementById('login-button').addEventListener('click', function (even
         // Update the users array with the found user
         users = storedUsers;
         window.location.href = 'home.html';
-        break; 
+        break;
       }
     }
     if (!userFound) {
