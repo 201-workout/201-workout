@@ -36,7 +36,6 @@ function displayWorkouts(currentUser) {
           }
         }
         newWorkoutElement.appendChild(exercisesElement);
-      
       }
 
     }
@@ -45,8 +44,8 @@ function displayWorkouts(currentUser) {
   }
 }
 
-if (window.location.pathname === "/index.html") {
-  currentUser = JSON.parse(localStorage.getItem('currentUser'));
+if (window.location.pathname === '/home.html') {
+  let currentUser = JSON.parse(localStorage.getItem('currentUser'));
   let userTitle = document.getElementById('user-name-title');
   userTitle.textContent = currentUser.name;
   displayWorkouts(currentUser);
@@ -103,10 +102,10 @@ function addExercise() {
   } else if (exerciseType === 'time') {
     const time = document.getElementById('time').value;
     userExercise = new UserExercise(exercise.name, exercise.bodyPart, exerciseType, null, time, null, null);
-  } else  {
+  } else {
     const distance = document.getElementById('distance').value;
     userExercise = new UserExercise(exercise.name, exercise.bodyPart, exerciseType, null, null, distance, null);
-  } 
+  }
 
   selectedExercises.push(userExercise);
 
@@ -156,15 +155,14 @@ function displaySelectedExercises() {
     deleteButton.onclick = function () {
       removeExercise(exercise);
     };
-  
-   
+
     deleteButton.style.padding = '5px';
     deleteButton.style.borderRadius = '5px';
     deleteButton.style.backgroundColor = '#252627';
     deleteButton.style.color = 'rgb(189, 182, 182)';
     deleteButton.style.fontSize = '14px';
     deleteButton.style.fontFamily = ' Courier New, Courier, monospace';
-    
+
     exerciseDiv.appendChild(deleteButton);
     selectedExercisesDiv.appendChild(exerciseDiv);
   }
@@ -177,10 +175,10 @@ function createWorkout() {
   const newWorkout = new Workout(workoutName, selectedExercises);
 
   document.getElementById('workout_name').value = '';
-  
+
   let storageValue = localStorage.getItem('users');
-  currentUser = JSON.parse(localStorage.getItem('currentUser'));
-  users = JSON.parse(storageValue);
+  let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  let users = JSON.parse(storageValue);
 
   // Find the user in the users array and add the new workout to their workouts
   for (let i = 0; i < users.length; i++) {
