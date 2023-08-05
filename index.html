@@ -2,35 +2,55 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Workout Tracker</title>
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body id="homepage-body">
-  <header id="header-home">
-    <nav class="nav-bar">
-      <section class="nav-items">
-        <nav-item id="nav-item-list"><a href="exercise-list.html">Exercise List</a></nav-item>
-      </section>
-    </nav>
-  </header>
-  <main id="home-main">
-    <h1 id="welcome-title">Welcome, <span id="user-name-title"></span>!</h1>
-    <div id="about-me">About Me:
-      <div id="age"></div>
-      <div id="weight"></div>
-    </div>
-    <section id="program-list">
-    </section>
-    <div id="create-workout-btn-container">
-      <button id="create-workout" type="submit">Create New Workout</button>
-    </div>
-  </main>
-  <script src="page-links.js"></script>
-  <script src="homePage.js"></script>
-  <script src="app.js" defer></script>
+
+<body id="login-body">
+    <main>
+        <div id="login-box">
+            <form id="login-form">
+                <div id="name-input">
+                    <label for="user-name-login">Please enter your name:</label>
+                    <input id="user-name-login" type="text" name="user-name" placeholder="Your Name" required>
+                </div>
+                <div id="login-button-section">
+                    <button type="submit" id="login-button" class ="login-page-buttons">Login</button>
+                </div>
+            </form>
+            <div id="break">
+                <hr class="login-hr">
+                <p>or</p>
+                <hr class="login-hr">
+            </div>
+            <form id="account-form">
+                <div id="create-account">
+                    <!-- <div id="new-name-input"> -->
+                    <label for="user-name-create">Please enter your name:</label>
+                    <input id="user-name-create" class="create-input" type="text" name="user-name"
+                        placeholder="Your Name" required>
+                    <!-- </div> -->
+                    <!-- <div id="age-input"> -->
+                    <label for="user-age">Please enter your age:</label>
+                    <input id="user-age" class="create-input" type="number" name="user-age" placeholder="Your Age"
+                        required>
+                    <!-- </div> -->
+                    <!-- <div id="weight-input"> -->
+                    <label for="user-weight">Please enter your weight:</label>
+                    <input id="user-weight" class="create-input" type="number" name="user-weight"
+                        placeholder="Your Weight (lbs)" required>
+                    <!-- </div> -->
+                    <div id="submit-button-section">
+                        <button type="submit" id="submit-button" class ="login-page-buttons">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script src="login.js"></script>
 </body>
 
 </html>
