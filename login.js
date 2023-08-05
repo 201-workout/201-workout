@@ -13,9 +13,9 @@ function User(name, age, weight, workouts) {
 
 // Function to retrieve data from the create user form
 function getUserData() {
-  const userNameInput = document.getElementById("user-name-create");
-  const userAgeInput = document.getElementById("user-age");
-  const userWeightInput = document.getElementById("user-weight");
+  const userNameInput = document.getElementById('user-name-create');
+  const userAgeInput = document.getElementById('user-age');
+  const userWeightInput = document.getElementById('user-weight');
   const name = userNameInput.value;
   const age = parseInt(userAgeInput.value);
   const weight = parseInt(userWeightInput.value);
@@ -24,7 +24,7 @@ function getUserData() {
 }
 
 // Event listener for the submit button
-document.getElementById("submit-button").addEventListener("click", function (event) {
+document.getElementById('submit-button').addEventListener('click', function (event) {
   event.preventDefault(); 
   const newUser = getUserData();
   currentUser = newUser;
@@ -32,7 +32,7 @@ document.getElementById("submit-button").addEventListener("click", function (eve
 
 
   let storageValue = localStorage.getItem('users'); // null or array of users.
-  if(storageValue == null){
+  if(storageValue === null){
     users = [];
   }else{
     users = JSON.parse(storageValue);
@@ -47,18 +47,18 @@ document.getElementById("submit-button").addEventListener("click", function (eve
 });
 
 // Checks if the user already exists
-document.getElementById("login-button").addEventListener("click", function (event) {
+document.getElementById('login-button').addEventListener('click', function (event) {
   event.preventDefault();
-  const userNameInput = document.getElementById("user-name-login");
+  const userNameInput = document.getElementById('user-name-login');
   const name = userNameInput.value;
   const storedUsers = JSON.parse(localStorage.getItem('users'));
   if (storedUsers === null ) {
-     // Add the shake effect to the login box
-     userNameInput.classList.add('shake');
-     // Remove the shake effect after the animation ends
-     userNameInput.addEventListener('animationend', function () {
-       userNameInput.classList.remove('shake');
-     });
+    // Add the shake effect to the login box
+    userNameInput.classList.add('shake');
+    // Remove the shake effect after the animation ends
+    userNameInput.addEventListener('animationend', function () {
+      userNameInput.classList.remove('shake');
+    });
     userNameInput.value = '';
   } else {
     let userFound = false; 
