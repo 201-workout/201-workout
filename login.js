@@ -43,7 +43,7 @@ document.getElementById("submit-button").addEventListener("click", function (eve
   // Store the new user data into local storage
   localStorage.setItem('users', JSON.stringify(users));
 
-  window.location.href = 'index.html';
+  window.location.href = 'home.html';
 });
 
 // Checks if the user already exists
@@ -69,7 +69,7 @@ document.getElementById("login-button").addEventListener("click", function (even
         userFound = true;
         // Update the users array with the found user
         users = storedUsers;
-        window.location.href = 'index.html';
+        window.location.href = 'home.html';
         break; 
       }
     }

@@ -45,7 +45,7 @@ function displayWorkouts(currentUser) {
   }
 }
 
-if (window.location.pathname === "/index.html") {
+if (window.location.pathname === "/home.html") {
   currentUser = JSON.parse(localStorage.getItem('currentUser'));
   let userTitle = document.getElementById('user-name-title');
   userTitle.textContent = currentUser.name;
