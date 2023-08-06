@@ -54,15 +54,17 @@ if (window.location.pathname === '/home.html') {
 
 
 // Populates the dropdown with exercise names
-for (let i = 0; i < exerciseDetails.length; i++) {
-  const exercise = exerciseDetails[i];
-  const exerciseOption = document.createElement('option');
-  exerciseOption.value = i; 
-  exerciseOption.textContent = exercise.name;
-  exerciseDropdown.appendChild(exerciseOption);
+if (window.location.pathname === '/exercisePage.html') {
+  for (let i = 0; i < exerciseDetails.length; i++) {
+    const exercise = exerciseDetails[i];
+    const exerciseOption = document.createElement('option');
+    exerciseOption.value = i; 
+    exerciseOption.textContent = exercise.name;
+    exerciseDropdown.appendChild(exerciseOption);
+  }
+  exerciseTypeDropdown.addEventListener('change', handleExerciseTypeChange);
 }
 
-exerciseTypeDropdown.addEventListener('change', handleExerciseTypeChange);
 
 // Function to handle exercise type change
 function handleExerciseTypeChange() {
