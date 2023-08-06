@@ -559,34 +559,37 @@ const exerciseDetails = [
 
 
 // append exercises to exercise list page
-for (let i = 0; i < exerciseDetails.length; i++) {
-  const exercise = exerciseDetails[i];
+if (window.location.pathname === '/exercise-list.html') {
+  for (let i = 0; i < exerciseDetails.length; i++) {
+    const exercise = exerciseDetails[i];
 
-  if (exercise['bodyPart'] === 'Chest') {
-    appendExerciseSection('chest-title', exercise);
+    if (exercise['bodyPart'] === 'Chest') {
+      appendExerciseSection('chest-title', exercise);
 
-  } else if (exercise['bodyPart'] === 'Back') {
-    appendExerciseSection('back-title', exercise);
+    } else if (exercise['bodyPart'] === 'Back') {
+      appendExerciseSection('back-title', exercise);
 
-  } else if (exercise['bodyPart'] === 'Legs') {
-    appendExerciseSection('legs-title', exercise);
+    } else if (exercise['bodyPart'] === 'Legs') {
+      appendExerciseSection('legs-title', exercise);
 
-  } else if (exercise['bodyPart'] === 'Shoulders') {
-    appendExerciseSection('shoulders-title', exercise);
+    } else if (exercise['bodyPart'] === 'Shoulders') {
+      appendExerciseSection('shoulders-title', exercise);
 
-  } else if (exercise['bodyPart'] === 'Biceps') {
-    appendExerciseSection('biceps-title', exercise);
+    } else if (exercise['bodyPart'] === 'Biceps') {
+      appendExerciseSection('biceps-title', exercise);
 
-  } else if (exercise['bodyPart'] === 'Triceps') {
-    appendExerciseSection('triceps-title', exercise);
+    } else if (exercise['bodyPart'] === 'Triceps') {
+      appendExerciseSection('triceps-title', exercise);
 
-  } else if (exercise['bodyPart'] === 'Abs') {
-    appendExerciseSection('abs-title', exercise);
+    } else if (exercise['bodyPart'] === 'Abs') {
+      appendExerciseSection('abs-title', exercise);
 
-  } else if (exercise['bodyPart'] === 'Cardio') {
-    appendExerciseSection('cardio-title', exercise);
+    } else if (exercise['bodyPart'] === 'Cardio') {
+      appendExerciseSection('cardio-title', exercise);
+    }
   }
 }
+
 
 // creates elements and populates them with data from exerciseDetails array
 function appendExerciseSection(bodyPartId, exercise) {
