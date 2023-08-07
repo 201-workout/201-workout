@@ -433,3 +433,9 @@ li a {
     background-color: rgba(255, 0, 0, 0.353);
     color: #111;
 }
+
+#create-workout a{
+  color: rgb(189, 182, 182);
+  font-family: 'Courier New', Courier, monospace;
+  text-decoration: none;
+}
