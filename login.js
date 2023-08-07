@@ -87,3 +87,16 @@ if (submitBtn) {
     }
   });
 }
+
+let localUser = {};
+let storageValue = localStorage.getItem('currentUser');
+if(storageValue !== null){
+  localUser = JSON.parse(storageValue);
+}
+
+// get name from current user object and add to welcome header
+document.getElementById('welcome-title').innerHTML = 'Welcome, ' + localUser.name + '!';
+
+// display the rest of current user object (age, weight, and workouts)
+document.getElementById('age').innerHTML = 'Age: ' + localUser.age;
+document.getElementById('weight').innerHTML = 'Weight: ' + localUser.weight;
