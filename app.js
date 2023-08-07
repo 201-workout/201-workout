@@ -7,12 +7,22 @@ const exerciseDetailsDiv = document.getElementById('exercise_details');
 const selectedExercisesDiv = document.getElementById('selected_exercises');
 const createWorkoutForm = document.getElementById('workoutForm');
 
+if (window.location.pathname === '/home.html') {
+  document.getElementById('create-workout').addEventListener('click', function () {
+    window.location.href = 'exercisePage.html';
+  });
+
+}
+
+
 if (createWorkoutForm) {
   createWorkoutForm.addEventListener('submit', function(e) {
     e.preventDefault();
     createWorkout();
   });
 }
+
+
 
 let selectedExercises = [];
 let dontUse = ['type', 'bodyPart'];
