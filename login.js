@@ -24,29 +24,29 @@ function getUserData() {
 }
 
 // Event listener for the submit button
-if (window.location.pathname === '/index.html') {
-  document.getElementById('submit-button').addEventListener('click', function (event) {
-    event.preventDefault();
-    const newUser = getUserData();
-    currentUser = newUser;
-    localStorage.setItem('currentUser', JSON.stringify(currentUser));
+
+document.getElementById('submit-button').addEventListener('click', function (event) {
+  event.preventDefault();
+  const newUser = getUserData();
+  currentUser = newUser;
+  localStorage.setItem('currentUser', JSON.stringify(currentUser));
 
 
-    let storageValue = localStorage.getItem('users'); // null or array of users.
-    if(storageValue === null){
-      users = [];
-    }else{
-      users = JSON.parse(storageValue);
-    }
-    // add newUser to users array
-    users.push(newUser);
+  let storageValue = localStorage.getItem('users'); // null or array of users.
+  if(storageValue === null){
+    users = [];
+  }else{
+    users = JSON.parse(storageValue);
+  }
+  // add newUser to users array
+  users.push(newUser);
 
-    // Store the new user data into local storage
-    localStorage.setItem('users', JSON.stringify(users));
+  // Store the new user data into local storage
+  localStorage.setItem('users', JSON.stringify(users));
 
-    window.location.href = 'home.html';
-  });
-}
+  window.location.href = 'home.html';
+});
+
 
 // Checks if the user already exists
 document.getElementById('login-button').addEventListener('click', function (event) {
