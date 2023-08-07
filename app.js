@@ -44,27 +44,26 @@ function displayWorkouts(currentUser) {
   }
 }
 
-if (window.location.pathname === '/home.html') {
-  let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-  let userTitle = document.getElementById('user-name-title');
-  userTitle.textContent = currentUser.name;
+if (window.location.pathname === "/home.html") {
+  currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  console.log(currentUser.name);
+  // let userTitle = document.getElementById('user-name-title');
+  // userTitle.textContent = currentUser.name;
   displayWorkouts(currentUser);
 }
 
 
 
 // Populates the dropdown with exercise names
-if (window.location.pathname === '/exercisePage.html') {
-  for (let i = 0; i < exerciseDetails.length; i++) {
-    const exercise = exerciseDetails[i];
-    const exerciseOption = document.createElement('option');
-    exerciseOption.value = i; 
-    exerciseOption.textContent = exercise.name;
-    exerciseDropdown.appendChild(exerciseOption);
-  }
-  exerciseTypeDropdown.addEventListener('change', handleExerciseTypeChange);
+for (let i = 0; i < exerciseDetails.length; i++) {
+  const exercise = exerciseDetails[i];
+  const exerciseOption = document.createElement('option');
+  exerciseOption.value = i; 
+  exerciseOption.textContent = exercise.name;
+  exerciseDropdown.appendChild(exerciseOption);
 }
 
+exerciseTypeDropdown.addEventListener('change', handleExerciseTypeChange);
 
 // Function to handle exercise type change
 function handleExerciseTypeChange() {
@@ -104,10 +103,10 @@ function addExercise() {
   } else if (exerciseType === 'time') {
     const time = document.getElementById('time').value;
     userExercise = new UserExercise(exercise.name, exercise.bodyPart, exerciseType, null, time, null, null);
-  } else {
+  } else  {
     const distance = document.getElementById('distance').value;
     userExercise = new UserExercise(exercise.name, exercise.bodyPart, exerciseType, null, null, distance, null);
-  }
+  } 
 
   selectedExercises.push(userExercise);
 
@@ -157,14 +156,15 @@ function displaySelectedExercises() {
     deleteButton.onclick = function () {
       removeExercise(exercise);
     };
-
+  
+   
     deleteButton.style.padding = '5px';
     deleteButton.style.borderRadius = '5px';
     deleteButton.style.backgroundColor = '#252627';
     deleteButton.style.color = 'rgb(189, 182, 182)';
     deleteButton.style.fontSize = '14px';
     deleteButton.style.fontFamily = ' Courier New, Courier, monospace';
-
+    
     exerciseDiv.appendChild(deleteButton);
     selectedExercisesDiv.appendChild(exerciseDiv);
   }
@@ -177,10 +177,10 @@ function createWorkout() {
   const newWorkout = new Workout(workoutName, selectedExercises);
 
   document.getElementById('workout_name').value = '';
-
+  
   let storageValue = localStorage.getItem('users');
-  let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-  let users = JSON.parse(storageValue);
+  currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  users = JSON.parse(storageValue);
 
   // Find the user in the users array and add the new workout to their workouts
   for (let i = 0; i < users.length; i++) {
