@@ -1,4 +1,7 @@
 # 201-workout
+
+[Deployed link](https://workout-tracker-201.netlify.app/)
+
 Group members: Samaad Turner, Joshua Shea, Ekaterina Khoroshilova, John Gause
 
 Workout Tracker:
