@@ -45,7 +45,7 @@ function displayWorkouts(currentUser) {
   }
 }
 
-if (window.location.pathname.endsWith("/home.html")) {
+if (window.location.pathname.endsWith('/home')) {
   currentUser = JSON.parse(localStorage.getItem('currentUser'));
   console.log(currentUser.name);
   // let userTitle = document.getElementById('user-name-title');
@@ -54,7 +54,7 @@ if (window.location.pathname.endsWith("/home.html")) {
 }
 
 // Populates the dropdown with exercise names
-if (window.location.pathname.endsWith('/exercisePage.html'))  {
+if (window.location.pathname.endsWith('/exercisepage'))  {
   for (let i = 0; i < exerciseDetails.length; i++) {
     const exercise = exerciseDetails[i];
     const exerciseOption = document.createElement('option');
