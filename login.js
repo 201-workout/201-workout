@@ -10,7 +10,6 @@ function User(name, age, weight, workouts) {
   this.workouts = [];
 }
 
-
 // Function to retrieve data from the create user form
 function getUserData() {
   const userNameInput = document.getElementById('user-name-create');

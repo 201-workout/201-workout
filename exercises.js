@@ -559,7 +559,7 @@ const exerciseDetails = [
 
 
 // append exercises to exercise list page
-if (window.location.pathname === '/exercise-list.html') {
+if (window.location.pathname.endsWith ('/exercise-list.html')) {
   for (let i = 0; i < exerciseDetails.length; i++) {
     const exercise = exerciseDetails[i];
 

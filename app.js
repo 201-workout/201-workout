@@ -7,13 +7,6 @@ const exerciseDetailsDiv = document.getElementById('exercise_details');
 const selectedExercisesDiv = document.getElementById('selected_exercises');
 const createWorkoutForm = document.getElementById('workoutForm');
 
-// if (window.location.pathname === '/home.html') {
-//   document.getElementById('create-workout').addEventListener('click', function () {
-//     window.location.href = 'exercisePage.html';
-//   });
-
-// }
-
 
 if (createWorkoutForm) {
   createWorkoutForm.addEventListener('submit', function(e) {
@@ -21,8 +14,6 @@ if (createWorkoutForm) {
     createWorkout();
   });
 }
-
-
 
 let selectedExercises = [];
 let dontUse = ['type', 'bodyPart'];
@@ -54,7 +45,7 @@ function displayWorkouts(currentUser) {
   }
 }
 
-if (window.location.pathname === "/home.html") {
+if (window.location.pathname.endsWith("/home.html")) {
   currentUser = JSON.parse(localStorage.getItem('currentUser'));
   console.log(currentUser.name);
   // let userTitle = document.getElementById('user-name-title');
@@ -62,10 +53,8 @@ if (window.location.pathname === "/home.html") {
   displayWorkouts(currentUser);
 }
 
-
-
 // Populates the dropdown with exercise names
-if (window.location.pathname === '/exercisePage.html') {
+if (window.location.pathname.endsWith('/exercisePage.html'))  {
   for (let i = 0; i < exerciseDetails.length; i++) {
     const exercise = exerciseDetails[i];
     const exerciseOption = document.createElement('option');
@@ -99,7 +88,6 @@ function handleExerciseTypeChange() {
   }
 }
 
-
 // Function to add the selected exercise to the workout
 function addExercise() {
   const exerciseIndex = exerciseDropdown.value;
@@ -129,7 +117,6 @@ function addExercise() {
   document.getElementById('time').value = '';
   document.getElementById('distance').value = '';
 }
-
 
 // Function to remove an exercise from the selected exercises
 function removeExercise(exerciseToRemove) {
